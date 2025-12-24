@@ -35,7 +35,7 @@ function App() {
       <div className="max-w-7xl mx-auto space-y-6">
         <MarketTicker />
         <Header appData={appData} />
-        <Navigation showTab={showTab} />
+        <Navigation activeTab={activeTab} showTab={showTab} />
         
         <div style={{ display: activeTab === 'exec' ? 'block' : 'none' }}>
           <ExecutiveSummary appData={appData} />
@@ -45,7 +45,7 @@ function App() {
           <IntelligenceDesk />
         </div>
         <div style={{ display: activeTab === 'vault' ? 'block' : 'none' }}>
-          <RaidVault />
+          <RaidVault appData={appData} />
         </div>
         <div style={{ display: activeTab === 'bench' ? 'block' : 'none' }}>
           <Benchmarks appData={appData} />

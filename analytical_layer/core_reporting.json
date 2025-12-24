@@ -42,31 +42,31 @@
         "building": "Orange Farm 1",
         "type": "FARM",
         "product": "Oranges",
-        "quantity": 1835,
-        "sourcing_value": 3327,
+        "quantity": 1296,
+        "sourcing_value": 2349,
         "quality": 0,
         "cost_per_unit": 1.81,
-        "finish_time": "2025-12-24T13:27:00Z"
+        "finish_time": "2025-12-24T14:27:00Z"
       },
       {
         "building": "Orange Farm 2",
         "type": "FARM",
         "product": "Oranges",
-        "quantity": 450,
-        "sourcing_value": 821,
+        "quantity": 1000,
+        "sourcing_value": 1820,
         "quality": 0,
         "cost_per_unit": 1.82,
-        "finish_time": "2025-12-24T10:58:00Z"
+        "finish_time": "2025-12-24T17:22:00Z"
       },
       {
         "building": "Seed Farm",
         "type": "FARM",
         "product": "Seeds",
-        "quantity": 4000,
-        "sourcing_value": 620,
+        "quantity": 3321,
+        "sourcing_value": 514,
         "quality": 0,
         "cost_per_unit": 0.15,
-        "finish_time": "2025-12-24T14:43:00Z"
+        "finish_time": "2025-12-24T15:43:00Z"
       },
       {
         "building": "Grocery Store",
@@ -76,6 +76,15 @@
         "price": 6.99,
         "projected_revenue": 8959,
         "finish_time": "2025-12-24T18:56:00Z"
+      },
+      {
+        "building": "Xmas Market",
+        "type": "RETAIL",
+        "product": "Xmas ornament",
+        "quantity": 100,
+        "price": 28.5,
+        "projected_revenue": 2272,
+        "finish_time": "2025-12-24T23:59:00Z"
       }
     ],
     "medium_term_strategy": "Go all-in on farming: produce seeds and oranges, buying water from the market. Sell excess resources weekly to build cashflow, keeping stock JIT instead of warehoused."
@@ -147,5 +156,15 @@
       }
     }
   },
+  "inventory": [
+    { "resource": "Power", "quality": 0, "amount": 10100, "value": 2328 },
+    { "resource": "Water", "quality": 0, "amount": 6000, "value": 2211 },
+    { "resource": "Oranges", "quality": 0, "amount": 1704, "value": 3101 },
+    { "resource": "Transport", "quality": 0, "amount": 4500, "value": 1575 },
+    { "resource": "Seeds", "quality": 0, "amount": 479, "value": 72 },
+    { "resource": "Luxury watch", "quality": 5, "amount": 1, "value": 800 },
+    { "resource": "Reinforced concrete", "quality": 1, "amount": 36, "value": 7488 },
+    { "resource": "Bricks", "quality": 4, "amount": 495, "value": 1312 }
+  ],
   "last_updated": "2025-12-24T01:18:40Z"
 }
