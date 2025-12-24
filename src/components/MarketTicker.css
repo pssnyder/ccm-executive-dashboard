@@ -1,0 +1,41 @@
+.market-ticker-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+}
+
+.market-ticker {
+    display: flex;
+    animation: ticker-scroll 60s linear infinite;
+    width: max-content;
+}
+
+.ticker-item {
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    color: #cbd5e1; /* slate-300 */
+    font-size: 0.75rem; /* text-xs */
+}
+
+.ticker-item .item-name {
+    color: #64748b; /* slate-500 */
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.ticker-item .item-price {
+    color: #5eead4; /* teal-300 */
+    font-weight: bold;
+}
+
+@keyframes ticker-scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}

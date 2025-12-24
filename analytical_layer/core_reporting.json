@@ -1,0 +1,151 @@
+{
+  "commodities": {
+    "oranges": {
+      "market_price_history": [
+        {
+          "date": "2025-12-23",
+          "quality": 0,
+          "price": 4.45
+        }
+      ],
+      "production_costs": {
+        "seeds_per_unit": 0.5,
+        "water_per_unit": 1,
+        "wages_per_unit": 0
+      },
+      "notes": "Primary cash-generating asset for conduit operations. Zero-wage production."
+    }
+  },
+  "company_overview": {
+    "ranking": 22008,
+    "rating": "B-",
+    "company_value": 47425,
+    "buildings_value": 17250,
+    "level": 6,
+    "max_buildings": "5 + 4",
+    "admin_overhead": 0.59
+  },
+  "balance_sheet": {
+    "timestamp": "2025-12-24T01:18:40.910008+00:00",
+    "cash": 12361,
+    "accounts_receivable": 489,
+    "inventory_materials": 24556,
+    "inventory_finished_goods": 5667,
+    "inventory_valuation_allowance": -4017,
+    "buildings": 17250,
+    "contributed_capital": 24760,
+    "retained_earnings": 22665
+  },
+  "operations": {
+    "short_term": [
+      {
+        "building": "Orange Farm 1",
+        "type": "FARM",
+        "product": "Oranges",
+        "quantity": 1835,
+        "sourcing_value": 3327,
+        "quality": 0,
+        "cost_per_unit": 1.81,
+        "finish_time": "2025-12-24T13:27:00Z"
+      },
+      {
+        "building": "Orange Farm 2",
+        "type": "FARM",
+        "product": "Oranges",
+        "quantity": 450,
+        "sourcing_value": 821,
+        "quality": 0,
+        "cost_per_unit": 1.82,
+        "finish_time": "2025-12-24T10:58:00Z"
+      },
+      {
+        "building": "Seed Farm",
+        "type": "FARM",
+        "product": "Seeds",
+        "quantity": 4000,
+        "sourcing_value": 620,
+        "quality": 0,
+        "cost_per_unit": 0.15,
+        "finish_time": "2025-12-24T14:43:00Z"
+      },
+      {
+        "building": "Grocery Store",
+        "type": "RETAIL",
+        "product": "Oranges",
+        "quantity": 2000,
+        "price": 6.99,
+        "projected_revenue": 8959,
+        "finish_time": "2025-12-24T18:56:00Z"
+      }
+    ],
+    "medium_term_strategy": "Go all-in on farming: produce seeds and oranges, buying water from the market. Sell excess resources weekly to build cashflow, keeping stock JIT instead of warehoused."
+  },
+  "long_term_goals": {
+    "power_plant": {
+      "label": "Power (L1)",
+      "total_cost": 58127,
+      "cost_inflation": 6377,
+      "status": "Primary Target",
+      "output": {
+        "rate": 2566.94,
+        "unit": "units/hour",
+        "worker_cost_per_unit": 0.16,
+        "admin_cost_per_unit": 0
+      },
+      "requirements": {
+        "time_to_build": "3h",
+        "wages_per_hour": 414,
+        "reinforced_concrete": 60,
+        "bricks": 825,
+        "planks": 240,
+        "construction_units": 15
+      }
+    },
+    "bank": {
+      "label": "Bank (L1)",
+      "total_cost": 155479,
+      "cost_inflation": 17479,
+      "status": "Secondary Target",
+      "benefit": "Boosts executives' accounting effectiveness by $50k per level per skill point.",
+      "requirements": {
+        "time_to_build": "8h",
+        "wages_per_hour": 0,
+        "reinforced_concrete": 160,
+        "bricks": 2200,
+        "planks": 640,
+        "construction_units": 40
+      }
+    },
+    "academy": {
+      "label": "Academy (L1)",
+      "total_cost": 73793,
+      "cost_inflation": 8243,
+      "status": "Tertiary Target",
+      "benefit": "Improves executive training and unlocks extra boardroom slots every 5 levels.",
+      "requirements": {
+        "time_to_build": "8h",
+        "wages_per_hour": 0,
+        "reinforced_concrete": 76,
+        "bricks": 1045,
+        "planks": 304,
+        "construction_units": 19
+      }
+    },
+    "software_rd": {
+      "label": "SaaS (L1)",
+      "total_cost": 73713,
+      "cost_inflation": 8163,
+      "status": "Stretch Goal",
+      "benefit": "Improves quality of high-tech products like computers and robots.",
+      "requirements": {
+        "time_to_build": "3h",
+        "wages_per_hour": 587,
+        "reinforced_concrete": 76,
+        "bricks": 1045,
+        "planks": 304,
+        "construction_units": 19
+      }
+    }
+  },
+  "last_updated": "2025-12-24T01:18:40Z"
+}
