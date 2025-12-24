@@ -1,0 +1,394 @@
+,Resource,Speed modifier,buildings,Since,Until
+1,Dress,24.00%,Fashion factory,12/22/2025,1/12/2026
+2,Processors,-22.00%,Electronics factory,12/22/2025,1/12/2026
+3,Pumpkin,-24.00%,Farm,12/22/2025,1/12/2026
+4,Orange juice,-14.00%,Beverage factory,12/15/2025,1/5/2026
+5,Sausages,13.00%,Slaughterhouse,12/15/2025,1/5/2026
+6,Cockpit,-13.00%,Aerospace electronics,12/15/2025,1/5/2026
+7,Salad,-14.00%,Catering,12/8/2025,12/29/2025
+8,Sauce,-14.00%,Catering,12/8/2025,12/29/2025
+9,Software,15.00%,Software R&D,12/8/2025,12/29/2025
+10,Flight computer,-15.00%,Aerospace electronics,12/1/2025,12/22/2025
+11,Reinforced concrete,-12.00%,Concrete plant,12/1/2025,12/22/2025
+12,Cotton,-12.00%,Farm,12/1/2025,12/22/2025
+13,Fodder,13.00%,Mill,11/24/2025,12/15/2025
+14,Luxury car interior,13.00%,Car factory,11/24/2025,12/15/2025
+15,Attitude control,-14.00%,Aerospace electronics,11/24/2025,12/15/2025
+16,Gloves,13.00%,Fashion factory,11/17/2025,12/8/2025
+17,Ethanol,14.00%,Beverage factory,11/17/2025,12/8/2025
+18,Grapes,13.00%,Farm,11/17/2025,12/8/2025
+19,Chemicals,-10.00%,Factory,11/10/2025,12/1/2025
+20,Silicon,-11.00%,Factory,11/10/2025,12/1/2025
+21,Recipes,13.00%,Kitchen,11/10/2025,12/1/2025
+22,Materials research,12.00%,Chemistry laboratory,11/3/2025,11/24/2025
+23,Chemistry research,13.00%,Chemistry laboratory,11/3/2025,11/24/2025
+24,Eggs,13.00%,Ranch,11/3/2025,11/24/2025
+25,Laptops,15.00%,Electronics factory,10/27/2025,11/17/2025
+26,Sneakers,-13.00%,Fashion factory,10/27/2025,11/17/2025
+27,Economy car,15.00%,Car factory,10/27/2025,11/17/2025
+28,Bricks,14.00%,Concrete plant,10/20/2025,11/10/2025
+29,Construction units,-12.00%,General contractor,10/20/2025,11/10/2025
+30,Pigs,-13.00%,Ranch,10/20/2025,11/10/2025
+31,High grade e-comps,-13.00%,Electronics factory,10/13/2025,11/3/2025
+32,Single engine plane,12.00%,Hangar,10/13/2025,11/3/2025
+33,Luxury jet,15.00%,Hangar,10/13/2025,11/3/2025
+34,Ginger beer,-13.00%,Beverage factory,10/6/2025,10/27/2025
+35,Carbon fibers,13.00%,Refinery,10/6/2025,10/27/2025
+36,Coffee beans,12.00%,Farm,10/6/2025,10/27/2025
+37,Tools,13.00%,Construction factory,9/29/2025,10/20/2025
+38,Cows,-14.00%,Ranch,9/29/2025,10/20/2025
+39,Smart phones,-14.00%,Electronics factory,9/29/2025,10/20/2025
+40,Steel,12.00%,Factory,9/22/2025,10/13/2025
+41,Heat shield,14.00%,Aerospace factory,9/22/2025,10/13/2025
+42,Lasagna,12.00%,Catering,9/22/2025,10/13/2025
+43,Displays,14.00%,Electronics factory,9/15/2025,10/6/2025
+44,Monitors,14.00%,Electronics factory,9/15/2025,10/6/2025
+45,Luxury e-car,-13.00%,Car factory,9/15/2025,10/6/2025
+46,Sauce,-14.00%,Catering,9/8/2025,9/29/2025
+47,Fabric,12.00%,Fashion factory,9/8/2025,9/29/2025
+48,Plastic,-13.00%,Refinery,9/8/2025,9/29/2025
+49,Reinforced concrete,15.00%,Concrete plant,9/1/2025,9/22/2025
+50,Rocket engine,-15.00%,Propulsion factory,9/1/2025,9/22/2025
+51,Combustion engine,-12.00%,Propulsion factory,9/1/2025,9/22/2025
+52,Chemistry research,-15.00%,Chemistry laboratory,8/25/2025,9/15/2025
+53,Basic interior,-14.00%,Car factory,8/25/2025,9/15/2025
+54,Aluminium,-11.00%,Factory,8/25/2025,9/15/2025
+55,Windows,-13.00%,Construction factory,8/18/2025,9/8/2025
+56,Oranges,15.00%,Farm,8/18/2025,9/8/2025
+57,Necklace,-12.00%,Fashion factory,8/18/2025,9/8/2025
+58,Sausages,-12.00%,Slaughterhouse,8/11/2025,9/1/2025
+59,Jumbo jet,-14.00%,Hangar,8/11/2025,9/1/2025
+60,Energy research,14.00%,Physics laboratory,8/11/2025,9/1/2025
+61,Cocktails,-14.00%,Catering,8/4/2025,8/25/2025
+62,Economy e-car,-14.00%,Car factory,8/4/2025,8/25/2025
+63,Luxury jet,14.00%,Hangar,8/4/2025,8/25/2025
+64,Starship,15.00%,Aerospace factory,7/28/2025,8/18/2025
+65,Leather,-12.00%,Ranch,7/28/2025,8/18/2025
+66,Sugar,13.00%,Food processing plant,7/28/2025,8/18/2025
+67,Butter,13.00%,Food processing plant,7/21/2025,8/11/2025
+68,Cocoa,-12.00%,Farm,7/21/2025,8/11/2025
+69,Sneakers,-13.00%,Fashion factory,7/21/2025,8/11/2025
+70,Sub-orbital rocket,-13.00%,Vertical integration facility,7/14/2025,8/4/2025
+71,Hamburger,13.00%,Catering,7/14/2025,8/4/2025
+72,High grade e-comps,-13.00%,Electronics factory,7/14/2025,8/4/2025
+73,Cows,-14.00%,Ranch,7/7/2025,7/28/2025
+74,Pasta,14.00%,Food processing plant,7/7/2025,7/28/2025
+75,Single engine plane,13.00%,Hangar,7/7/2025,7/28/2025
+76,Plant research,14.00%,Plant research center,6/30/2025,7/21/2025
+77,Rocket fuel,-13.00%,Refinery,6/30/2025,7/21/2025
+78,Luxury car,-14.00%,Car factory,6/30/2025,7/21/2025
+79,Bread,13.00%,Bakery,6/23/2025,7/14/2025
+80,Electric motor,-12.00%,Propulsion factory,6/23/2025,7/14/2025
+81,Lasagna,12.00%,Catering,6/23/2025,7/14/2025
+82,Orbital booster,-13.00%,Aerospace factory,6/16/2025,7/7/2025
+83,Breeding research,14.00%,Breeding laboratory,6/16/2025,7/7/2025
+84,Handbags,15.00%,Fashion factory,6/16/2025,7/7/2025
+85,Automotive research,-14.00%,Automotive R&D,6/9/2025,6/30/2025
+86,Flour,-13.00%,Mill,6/9/2025,6/30/2025
+87,Materials research,14.00%,Chemistry laboratory,6/9/2025,6/30/2025
+88,Sugarcane,-13.00%,Farm,6/2/2025,6/23/2025
+89,Carbon composite,-13.00%,Factory,6/2/2025,6/23/2025
+90,Stiletto Heel,15.00%,Fashion factory,6/2/2025,6/23/2025
+91,Economy e-car,-14.00%,Car factory,5/26/2025,6/16/2025
+92,Basic interior,-13.00%,Car factory,5/26/2025,6/16/2025
+93,Wood,14.00%,Farm,5/26/2025,6/16/2025
+94,Aluminium,-11.00%,Factory,5/19/2025,6/9/2025
+95,Windows,-13.00%,Construction factory,5/19/2025,6/9/2025
+96,Televisions,13.00%,Electronics factory,5/19/2025,6/9/2025
+97,Bulldozer,13.00%,Car factory,5/12/2025,6/2/2025
+98,Vegetables,11.00%,Farm,5/12/2025,6/2/2025
+99,Reinforced concrete,13.00%,Concrete plant,5/12/2025,6/2/2025
+100,Cement,13.00%,Concrete plant,5/5/2025,5/26/2025
+101,Oranges,-12.00%,Farm,5/5/2025,5/26/2025
+102,BFR,13.00%,Vertical integration facility,5/5/2025,5/26/2025
+103,Golden bars,-13.00%,Factory,4/28/2025,5/19/2025
+104,Electronic components,13.00%,Electronics factory,4/28/2025,5/19/2025
+105,Apples,-13.00%,Farm,4/28/2025,5/19/2025
+106,Construction units,14.00%,General contractor,4/21/2025,5/12/2025
+107,Solid fuel booster,-14.00%,Propulsion factory,4/21/2025,5/12/2025
+108,Silicon,12.00%,Factory,4/21/2025,5/12/2025
+109,Pumpkin,13.00%,Farm,4/14/2025,5/5/2025
+110,Starship,-14.00%,Aerospace factory,4/14/2025,5/5/2025
+111,Dress,-13.00%,Fashion factory,4/14/2025,5/5/2025
+112,Transport,14.00%,Shipping depot,4/7/2025,4/28/2025
+113,Sub-orbital 2nd stage,-13.00%,Aerospace factory,4/7/2025,4/28/2025
+114,Grapes,-12.00%,Farm,4/7/2025,4/28/2025
+115,Sneakers,14.00%,Fashion factory,3/31/2025,4/21/2025
+116,Luxury car,14.00%,Car factory,3/31/2025,4/21/2025
+117,Stiletto Heel,-13.00%,Fashion factory,3/31/2025,4/21/2025
+118,Necklace,15.00%,Fashion factory,3/24/2025,4/14/2025
+119,Cows,12.00%,Ranch,3/24/2025,4/14/2025
+120,Hamburger,15.00%,Catering,3/24/2025,4/14/2025
+121,Diesel,-13.00%,Refinery,3/17/2025,4/7/2025
+122,Televisions,-15.00%,Electronics factory,3/17/2025,4/7/2025
+123,Truck,-13.00%,Car factory,3/17/2025,4/7/2025
+124,Quadcopter,-14.00%,Aerospace electronics,3/10/2025,3/31/2025
+125,Monitors,-13.00%,Electronics factory,3/10/2025,3/31/2025
+126,Ginger beer,-14.00%,Beverage factory,3/10/2025,3/31/2025
+127,Butter,12.00%,Food processing plant,3/3/2025,3/24/2025
+128,Orange juice,-14.00%,Beverage factory,3/3/2025,3/24/2025
+129,Frozen pizza,15.00%,Food processing plant,3/3/2025,3/24/2025
+130,Steel,7.00%,Factory,2/24/2025,3/17/2025
+131,Planks,-8.00%,Construction factory,2/24/2025,3/17/2025
+132,Steel beams,-7.00%,Construction factory,2/24/2025,3/17/2025
+133,Single engine plane,-8.00%,Hangar,2/17/2025,3/10/2025
+134,Sub-orbital rocket,-7.00%,Vertical integration facility,2/17/2025,3/10/2025
+135,Sugar,-7.00%,Food processing plant,2/17/2025,3/10/2025
+136,Steak,-7.00%,Slaughterhouse,2/10/2025,3/3/2025
+137,Satellite,7.00%,Aerospace electronics,2/10/2025,3/3/2025
+138,Cotton,-7.00%,Farm,2/10/2025,3/3/2025
+139,Lasagna,8.00%,Catering,2/3/2025,2/24/2025
+140,Apple cider,-7.00%,Beverage factory,2/3/2025,2/24/2025
+141,Processors,-6.00%,Electronics factory,2/3/2025,2/24/2025
+142,Milk,7.00%,Ranch,1/27/2025,2/17/2025
+143,Plastic,7.00%,Refinery,1/27/2025,2/17/2025
+144,Salad,-7.00%,Catering,1/27/2025,2/17/2025
+145,Apple pie,-8.00%,Bakery,1/20/2025,2/10/2025
+146,Batteries,6.00%,Electronics factory,1/20/2025,2/10/2025
+147,Necklace,-7.00%,Fashion factory,1/20/2025,2/10/2025
+148,Basic interior,7.00%,Car factory,1/13/2025,2/3/2025
+149,Ion drive,-8.00%,Propulsion factory,1/13/2025,2/3/2025
+150,Meat balls,-7.00%,Catering,1/13/2025,2/3/2025
+151,Orbital booster,7.00%,Aerospace factory,1/6/2025,1/27/2025
+152,On-board computer,7.00%,Electronics factory,1/6/2025,1/27/2025
+153,Coffee beans,7.00%,Farm,1/6/2025,1/27/2025
+154,Quadcopter,7.00%,Aerospace electronics,12/30/2024,1/20/2025
+155,Luxury watch,-7.00%,Fashion factory,12/30/2024,1/20/2025
+156,Luxury car interior,7.00%,Car factory,12/30/2024,1/20/2025
+157,Sugarcane,-7.00%,Farm,12/23/2024,1/13/2025
+158,Wing,7.00%,Aerospace factory,12/23/2024,1/13/2025
+159,Aluminium,7.00%,Factory,12/23/2024,1/13/2025
+160,Stiletto Heel,8.00%,Fashion factory,12/16/2024,1/6/2025
+161,Electronics research,7.00%,Physics laboratory,12/16/2024,1/6/2025
+162,Electronic components,7.00%,Electronics factory,12/16/2024,1/6/2025
+163,Displays,6.00%,Electronics factory,12/9/2024,12/30/2024
+164,Ginger beer,-8.00%,Beverage factory,12/9/2024,12/30/2024
+165,Chemistry research,-7.00%,Chemistry laboratory,12/9/2024,12/30/2024
+166,Combustion engine,-8.00%,Propulsion factory,12/2/2024,12/23/2024
+167,Processors,7.00%,Electronics factory,12/2/2024,12/23/2024
+168,Gloves,-7.00%,Fashion factory,12/2/2024,12/23/2024
+169,Eggs,-7.00%,Ranch,11/25/2024,12/16/2024
+170,Hamburger,-7.00%,Catering,11/25/2024,12/16/2024
+171,Apples,-7.00%,Farm,11/25/2024,12/16/2024
+172,Flour,-8.00%,Mill,11/18/2024,12/9/2024
+173,Rocket fuel,-6.00%,Refinery,11/18/2024,12/9/2024
+174,Materials research,-7.00%,Chemistry laboratory,11/18/2024,12/9/2024
+175,Cheese,-7.00%,Food processing plant,11/11/2024,12/2/2024
+176,Planks,-8.00%,Construction factory,11/11/2024,12/2/2024
+177,Bulldozer,7.00%,Car factory,11/11/2024,12/2/2024
+178,Coffee beans,-6.00%,Farm,11/4/2024,11/25/2024
+179,Plastic,-7.00%,Refinery,11/4/2024,11/25/2024
+180,Cocoa,-7.00%,Farm,11/4/2024,11/25/2024
+181,Orange juice,-7.00%,Beverage factory,10/28/2024,11/18/2024
+182,Salad,8.00%,Catering,10/28/2024,11/18/2024
+183,Robots,-7.00%,Electronics factory,10/28/2024,11/18/2024
+184,Steel beams,7.00%,Construction factory,10/21/2024,11/11/2024
+185,Sauce,8.00%,Catering,10/21/2024,11/11/2024
+186,Fashion research,-8.00%,Fashion & Design,10/21/2024,11/11/2024
+187,Economy e-car,-7.00%,Car factory,10/14/2024,11/4/2024
+188,Luxury watch,-7.00%,Fashion factory,10/14/2024,11/4/2024
+189,Fodder,7.00%,Mill,10/14/2024,11/4/2024
+190,Handbags,8.00%,Fashion factory,10/7/2024,10/28/2024
+191,Single engine plane,-7.00%,Hangar,10/7/2024,10/28/2024
+192,Televisions,7.00%,Electronics factory,10/7/2024,10/28/2024
+193,Coffee powder,-7.00%,Mill,9/30/2024,10/21/2024
+194,Silicon,-5.00%,Factory,9/30/2024,10/21/2024
+195,Solid fuel booster,-7.00%,Propulsion factory,9/30/2024,10/21/2024
+196,Apple cider,-8.00%,Beverage factory,9/23/2024,10/14/2024
+197,Steel,6.00%,Factory,9/23/2024,10/14/2024
+198,Cement,-7.00%,Concrete plant,9/23/2024,10/14/2024
+199,Cockpit,-6.00%,Aerospace electronics,9/16/2024,10/7/2024
+200,Displays,-6.00%,Electronics factory,9/16/2024,10/7/2024
+201,Chocolate,-7.00%,Food processing plant,9/16/2024,10/7/2024
+202,Construction units,7.00%,General contractor,9/9/2024,9/30/2024
+203,Laptops,-7.00%,Electronics factory,9/9/2024,9/30/2024
+204,Electronics research,-7.00%,Physics laboratory,9/9/2024,9/30/2024
+205,Vegetables,6.00%,Farm,9/2/2024,9/23/2024
+206,Sub-orbital rocket,-7.00%,Vertical integration facility,9/2/2024,9/23/2024
+207,Samosa,7.00%,Catering,9/2/2024,9/23/2024
+208,Tablets,7.00%,Electronics factory,8/26/2024,9/16/2024
+209,Processors,7.00%,Electronics factory,8/26/2024,9/16/2024
+210,Cheese,7.00%,Food processing plant,8/26/2024,9/16/2024
+211,Oranges,-7.00%,Farm,8/19/2024,9/9/2024
+212,Grain,-6.00%,Farm,8/19/2024,9/9/2024
+213,Smart phones,7.00%,Electronics factory,8/19/2024,9/9/2024
+214,Sauce,-8.00%,Catering,8/12/2024,9/2/2024
+215,Monitors,7.00%,Electronics factory,8/12/2024,9/2/2024
+216,Windows,8.00%,Construction factory,8/12/2024,9/2/2024
+217,Gloves,8.00%,Fashion factory,8/5/2024,8/26/2024
+218,Cotton,-6.00%,Farm,8/5/2024,8/26/2024
+219,Chemicals,-5.00%,Factory,8/5/2024,8/26/2024
+220,Electric motor,7.00%,Propulsion factory,7/29/2024,8/19/2024
+221,Jet engine,8.00%,Propulsion factory,7/29/2024,8/19/2024
+222,High grade e-comps,-7.00%,Electronics factory,7/29/2024,8/19/2024
+223,Sub-orbital 2nd stage,-8.00%,Aerospace factory,7/22/2024,8/12/2024
+224,Tools,-8.00%,Construction factory,7/22/2024,8/12/2024
+225,Quadcopter,-6.00%,Aerospace electronics,7/22/2024,8/12/2024
+226,Flight computer,-7.00%,Aerospace electronics,7/15/2024,8/5/2024
+227,Dough,6.00%,Bakery,7/15/2024,8/5/2024
+228,Diesel,-7.00%,Refinery,7/15/2024,8/5/2024
+229,Rocket engine,8.00%,Propulsion factory,7/8/2024,7/29/2024
+230,Breeding research,8.00%,Breeding laboratory,7/8/2024,7/29/2024
+231,Underwear,-7.00%,Fashion factory,7/8/2024,7/29/2024
+232,Rocket fuel,6.00%,Refinery,7/1/2024,7/22/2024
+233,Carbon fibers,7.00%,Refinery,7/1/2024,7/22/2024
+234,Jumbo jet,-7.00%,Hangar,7/1/2024,7/22/2024
+235,Tablets,8.00%,Electronics factory,6/24/2024,7/15/2024
+236,Dress,8.00%,Fashion factory,6/24/2024,7/15/2024
+237,Luxury jet,-7.00%,Hangar,6/24/2024,7/15/2024
+238,Economy car,-8.00%,Car factory,6/17/2024,7/8/2024
+239,Steel,7.00%,Factory,6/17/2024,7/8/2024
+240,Cheese,8.00%,Food processing plant,6/17/2024,7/8/2024
+241,Grain,7.00%,Farm,6/10/2024,7/1/2024
+242,Orbital booster,-7.00%,Aerospace factory,6/10/2024,7/1/2024
+243,Oranges,7.00%,Farm,6/10/2024,7/1/2024
+244,Cows,7.00%,Ranch,6/3/2024,6/24/2024
+245,Grapes,-6.00%,Farm,6/3/2024,6/24/2024
+246,Televisions,7.00%,Electronics factory,6/3/2024,6/24/2024
+247,Coffee powder,-7.00%,Mill,5/27/2024,6/17/2024
+248,Silicon,6.00%,Factory,5/27/2024,6/17/2024
+249,Butter,7.00%,Food processing plant,5/27/2024,6/17/2024
+250,Cocoa,-7.00%,Farm,5/20/2024,6/10/2024
+251,Flour,-7.00%,Mill,5/20/2024,6/10/2024
+252,Eggs,-7.00%,Ranch,5/20/2024,6/10/2024
+253,Gloves,-7.00%,Fashion factory,5/13/2024,6/3/2024
+254,Starship,6.00%,Aerospace factory,5/13/2024,6/3/2024
+255,Fuselage,-6.00%,Aerospace factory,5/13/2024,6/3/2024
+256,Lasagna,7.00%,Catering,5/6/2024,5/27/2024
+257,Luxury car,-8.00%,Car factory,5/6/2024,5/27/2024
+258,Combustion engine,7.00%,Propulsion factory,5/6/2024,5/27/2024
+259,Luxury watch,7.00%,Fashion factory,4/29/2024,5/20/2024
+260,Quadcopter,-7.00%,Aerospace electronics,4/29/2024,5/20/2024
+261,Energy research,-8.00%,Physics laboratory,4/29/2024,5/20/2024
+262,Planks,6.00%,Construction factory,4/22/2024,5/13/2024
+263,Rocket fuel,7.00%,Refinery,4/22/2024,5/13/2024
+264,Vegetable oil,8.00%,Food processing plant,4/22/2024,5/13/2024
+265,Bulldozer,-8.00%,Car factory,4/15/2024,5/6/2024
+266,Single engine plane,-8.00%,Hangar,4/15/2024,5/6/2024
+267,Orange juice,-7.00%,Beverage factory,4/15/2024,5/6/2024
+268,Orbital booster,8.00%,Aerospace factory,4/8/2024,4/29/2024
+269,Meat balls,-7.00%,Catering,4/8/2024,4/29/2024
+270,Sub-orbital rocket,-7.00%,Vertical integration facility,4/8/2024,4/29/2024
+271,Car body,7.00%,Car factory,4/1/2024,4/22/2024
+272,Steel beams,-7.00%,Construction factory,4/1/2024,4/22/2024
+273,Processors,6.00%,Electronics factory,4/1/2024,4/22/2024
+274,Carbon fibers,-6.00%,Refinery,3/25/2024,4/15/2024
+275,Grapes,-7.00%,Farm,3/25/2024,4/15/2024
+276,Windows,7.00%,Construction factory,3/25/2024,4/15/2024
+277,Samosa,7.00%,Catering,3/18/2024,4/8/2024
+278,Glass,7.00%,Factory,3/18/2024,4/8/2024
+279,Vegetables,6.00%,Farm,3/18/2024,4/8/2024
+280,Economy car,-7.00%,Car factory,3/11/2024,4/1/2024
+281,Transport,8.00%,Shipping depot,3/11/2024,4/1/2024
+282,Sugar,-7.00%,Food processing plant,3/11/2024,4/1/2024
+283,Electronics research,-7.00%,Physics laboratory,3/4/2024,3/25/2024
+284,Construction units,-8.00%,General contractor,3/4/2024,3/25/2024
+285,Fashion research,-7.00%,Fashion & Design,3/4/2024,3/25/2024
+286,Golden bars,-6.00%,Factory,2/26/2024,3/18/2024
+287,Quadcopter,7.00%,Aerospace electronics,2/26/2024,3/18/2024
+288,Wing,-7.00%,Aerospace factory,2/26/2024,3/18/2024
+289,Televisions,6.00%,Electronics factory,2/19/2024,3/11/2024
+290,Vegetable oil,-7.00%,Food processing plant,2/19/2024,3/11/2024
+291,Aerospace research,-7.00%,Launch pad,2/19/2024,3/11/2024
+292,Handbags,8.00%,Fashion factory,2/12/2024,3/4/2024
+293,Ion drive,-7.00%,Propulsion factory,2/12/2024,3/4/2024
+294,Luxury car,-7.00%,Car factory,2/12/2024,3/4/2024
+295,Sneakers,7.00%,Fashion factory,2/5/2024,2/26/2024
+296,Luxury jet,-8.00%,Hangar,2/5/2024,2/26/2024
+297,Chemicals,6.00%,Factory,2/5/2024,2/26/2024
+298,Sugarcane,7.00%,Farm,1/29/2024,2/19/2024
+299,Cement,-7.00%,Concrete plant,1/29/2024,2/19/2024
+300,Pigs,-7.00%,Ranch,1/29/2024,2/19/2024
+301,Materials research,-8.00%,Chemistry laboratory,1/22/2024,2/12/2024
+302,Cows,-7.00%,Ranch,1/22/2024,2/12/2024
+303,Breeding research,-7.00%,Breeding laboratory,1/22/2024,2/12/2024
+304,Reinforced concrete,8.00%,Concrete plant,1/15/2024,2/5/2024
+305,Petrol,8.00%,Refinery,1/15/2024,2/5/2024
+306,Software,7.00%,Software R&D,1/15/2024,2/5/2024
+307,Single engine plane,-6.00%,Hangar,1/8/2024,1/29/2024
+308,On-board computer,-6.00%,Electronics factory,1/8/2024,1/29/2024
+309,Truck,7.00%,Car factory,1/8/2024,1/29/2024
+310,Fodder,-7.00%,Mill,1/1/2024,1/22/2024
+311,Flour,7.00%,Mill,1/1/2024,1/22/2024
+312,Orbital booster,7.00%,Aerospace factory,1/1/2024,1/22/2024
+313,Jet engine,-7.00%,Propulsion factory,12/25/2023,1/15/2024
+314,Plant research,8.00%,Plant research center,12/25/2023,1/15/2024
+315,Economy e-car,7.00%,Car factory,12/25/2023,1/15/2024
+316,Cocktails,8.00%,Catering,12/18/2023,1/8/2024
+317,Monitors,6.00%,Electronics factory,12/18/2023,1/8/2024
+318,Pasta,7.00%,Food processing plant,12/18/2023,1/8/2024
+319,Sugar,7.00%,Food processing plant,12/11/2023,1/1/2024
+320,Dough,-7.00%,Bakery,12/11/2023,1/1/2024
+321,Smart phones,8.00%,Electronics factory,12/11/2023,1/1/2024
+322,Heat shield,-6.00%,Aerospace factory,12/4/2023,12/25/2023
+323,Automotive research,8.00%,Automotive R&D,12/4/2023,12/25/2023
+324,Mining research,7.00%,Physics laboratory,12/4/2023,12/25/2023
+325,Quadcopter,-7.00%,Aerospace electronics,11/27/2023,12/18/2023
+326,Carbon fibers,-7.00%,Refinery,11/27/2023,12/18/2023
+327,Meat balls,8.00%,Catering,11/27/2023,12/18/2023
+328,Dress,7.00%,Fashion factory,11/20/2023,12/11/2023
+329,Electric motor,-8.00%,Propulsion factory,11/20/2023,12/11/2023
+330,Aerospace research,-7.00%,Launch pad,11/20/2023,12/11/2023
+331,Materials research,7.00%,Chemistry laboratory,11/13/2023,12/4/2023
+332,Handbags,7.00%,Fashion factory,11/13/2023,12/4/2023
+333,Golden bars,-7.00%,Factory,11/13/2023,12/4/2023
+334,Apple pie,8.00%,Bakery,11/6/2023,11/27/2023
+335,Silicon,-6.00%,Factory,11/6/2023,11/27/2023
+336,Processors,-7.00%,Electronics factory,11/6/2023,11/27/2023
+337,Tools,7.00%,Construction factory,10/30/2023,11/20/2023
+338,Displays,-7.00%,Electronics factory,10/30/2023,11/20/2023
+339,Sugarcane,6.00%,Farm,10/30/2023,11/20/2023
+340,Steel beams,8.00%,Construction factory,10/23/2023,11/13/2023
+341,Cement,7.00%,Concrete plant,10/23/2023,11/13/2023
+342,Televisions,-6.00%,Electronics factory,10/23/2023,11/13/2023
+343,Cheese,-8.00%,Food processing plant,10/16/2023,11/6/2023
+344,Software,-7.00%,Software R&D,10/16/2023,11/6/2023
+345,Rocket fuel,-7.00%,Refinery,10/16/2023,11/6/2023
+346,Glass,-8.00%,Factory,10/9/2023,10/30/2023
+347,Milk,-6.00%,Ranch,10/9/2023,10/30/2023
+348,Smart phones,-8.00%,Electronics factory,10/9/2023,10/30/2023
+349,Heat shield,-7.00%,Aerospace factory,10/2/2023,10/23/2023
+350,Sub-orbital 2nd stage,7.00%,Aerospace factory,10/2/2023,10/23/2023
+351,Petrol,-8.00%,Refinery,10/2/2023,10/23/2023
+352,Cotton,-6.00%,Farm,9/25/2023,10/16/2023
+353,Fuselage,7.00%,Aerospace factory,9/25/2023,10/16/2023
+354,Ethanol,-7.00%,Beverage factory,9/25/2023,10/16/2023
+355,Jet engine,-8.00%,Propulsion factory,9/18/2023,10/9/2023
+356,Starship,-7.00%,Aerospace factory,9/18/2023,10/9/2023
+357,Fabric,-7.00%,Fashion factory,9/18/2023,10/9/2023
+358,Steak,-8.00%,Slaughterhouse,9/11/2023,10/2/2023
+359,Bricks,-7.00%,Concrete plant,9/11/2023,10/2/2023
+360,Truck,-7.00%,Car factory,9/11/2023,10/2/2023
+361,Processors,-7.00%,Electronics factory,9/4/2023,9/25/2023
+362,Pasta,8.00%,Food processing plant,9/4/2023,9/25/2023
+363,Cows,-6.00%,Ranch,9/4/2023,9/25/2023
+364,Economy e-car,-7.00%,Car factory,8/28/2023,9/18/2023
+365,Cocoa,7.00%,Farm,8/28/2023,9/18/2023
+366,Dress,8.00%,Fashion factory,8/28/2023,9/18/2023
+367,Electronic components,7.00%,Electronics factory,8/21/2023,9/11/2023
+368,Aluminium,-6.00%,Factory,8/21/2023,9/11/2023
+369,Orbital booster,-8.00%,Aerospace factory,8/21/2023,9/11/2023
+370,Planks,7.00%,Construction factory,8/14/2023,9/4/2023
+371,Samosa,-8.00%,Catering,8/14/2023,9/4/2023
+372,Vegetables,-6.00%,Farm,8/14/2023,9/4/2023
+373,Plastic,6.00%,Refinery,8/7/2023,8/28/2023
+374,Combustion engine,7.00%,Propulsion factory,8/7/2023,8/28/2023
+375,Luxury watch,-8.00%,Fashion factory,8/7/2023,8/28/2023
+376,Lasagna,7.00%,Catering,7/31/2023,8/21/2023
+377,Handbags,-8.00%,Fashion factory,7/31/2023,8/21/2023
+378,Coffee powder,7.00%,Mill,7/31/2023,8/21/2023
+379,Coffee beans,7.00%,Farm,7/24/2023,8/14/2023
+380,Aerospace research,8.00%,Launch pad,7/24/2023,8/14/2023
+381,Orange juice,7.00%,Beverage factory,7/24/2023,8/14/2023
+382,Rocket engine,6.00%,Propulsion factory,7/17/2023,8/7/2023
+383,Petrol,7.00%,Refinery,7/17/2023,8/7/2023
+384,Reinforced concrete,7.00%,Concrete plant,7/17/2023,8/7/2023
+385,Stiletto Heel,-8.00%,Fashion factory,7/10/2023,7/31/2023
+386,Cotton,7.00%,Farm,7/10/2023,7/31/2023
+387,Bread,-7.00%,Bakery,7/10/2023,7/31/2023
+388,Pasta,-8.00%,Food processing plant,7/3/2023,7/24/2023
+389,BFR,-6.00%,Vertical integration facility,7/3/2023,7/24/2023
+390,Fabric,6.00%,Fashion factory,7/3/2023,7/24/2023
+391,Electronics research,7.00%,Physics laboratory,6/26/2023,7/17/2023
+392,Sauce,6.00%,Catering,6/26/2023,7/17/2023
+393,Sneakers,7.00%,Fashion factory,6/26/2023,7/17/2023

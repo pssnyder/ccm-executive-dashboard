@@ -1,0 +1,51 @@
+id,Timestamp,Category,Money,Description,Details
+2636385405,2025-12-24T01:05:06.893122+00:00,fees,-57,Market fees paid for Power order cancellation,"{""version"": 1, ""resource"": 1, ""amount"": 5000, ""quality"": 0, ""price"": 0.28, ""fees"": 57}"
+2636377061,2025-12-24T00:54:16.347520+00:00,sales,1782,Sales of Apples,"{""version"": 1, ""building"": ""G"", ""quality"": 1.0, ""price"": 4.99, ""unit_cogs"": 2.6000663790242284, ""remaining"": 3760}"
+2636364741,2025-12-24T00:36:51.352020+00:00,market,-1122,Bought Water on market,"{""version"": 1, ""amount"": 3000, ""price"": 0.374, ""sellers"": ""Best TYUN""}"
+2636099770,2025-12-23T23:25:59.418637+00:00,production,-557,Production of Oranges,"{""version"": 1, ""price"": 1.4990670073150147, ""quality"": 0, ""amount"": 1000}"
+2636099188,2025-12-23T23:25:20.574329+00:00,sales,601,Sales of Apples,"{""version"": 1, ""building"": ""G"", ""quality"": 1.0, ""price"": 4.99, ""unit_cogs"": 2.6000663790242284, ""remaining"": 5542}"
+2636093251,2025-12-23T23:18:26.327198+00:00,construction,0,Building expansion finished,"{""version"": 1, ""building"": ""P"", ""level"": 1}"
+2636077914,2025-12-23T23:01:33.038804+00:00,market,-39,Bought Water on market,"{""version"": 1, ""amount"": 100, ""price"": 0.39, ""sellers"": ""Sharky Sa""}"
+2636077637,2025-12-23T23:01:11.678066+00:00,market,-28,Bought Power on market,"{""version"": 1, ""amount"": 100, ""price"": 0.28, ""sellers"": ""K Raj Inc""}"
+2636074360,2025-12-23T22:56:47.419848+00:00,game,1000,Achievement - Buyer,{}
+2636073881,2025-12-23T22:56:10.726623+00:00,market,-1892,Bought Bricks on market,"{""version"": 1, ""amount"": 715, ""price"": 2.646153846153846, ""sellers"": ""K Raj Inc, Roscoe Inc""}"
+2636073862,2025-12-23T22:56:10.256337+00:00,market,-10816,Bought Reinforced concrete on market,"{""version"": 1, ""amount"": 52, ""price"": 208.0, ""sellers"": ""Donnabalken""}"
+2636073246,2025-12-23T22:55:19.312004+00:00,sales,603,Sales of Apples,"{""version"": 1, ""building"": ""G"", ""quality"": 1.0, ""price"": 4.99, ""unit_cogs"": 2.6000663790242284, ""remaining"": 6143}"
+2636048903,2025-12-23T22:25:13.896490+00:00,sales,714,Sales of Apples,"{""version"": 1, ""building"": ""G"", ""quality"": 1.0, ""price"": 4.99, ""unit_cogs"": 2.6000663790242284, ""remaining"": 6746}"
+2635997767,2025-12-23T21:25:14.294757+00:00,sales,1182,Sales of Apples,"{""version"": 1, ""building"": ""G"", ""quality"": 1.0, ""price"": 4.98, ""unit_cogs"": 2.6000663790242284, ""remaining"": 0}"
+2635941350,2025-12-23T20:25:42.955250+00:00,sales,1488,Sales of Apples,"{""version"": 1, ""building"": ""G"", ""quality"": 1.0, ""price"": 4.98, ""unit_cogs"": 2.6000663790242284, ""remaining"": 1182}"
+2635871741,2025-12-23T19:13:11.625644+00:00,fees,-21,Market fees selling Seeds,{}
+2635871740,2025-12-23T19:13:11.622724+00:00,market,528,Seeds market order filled,"{""version"": 1, ""resource"": 66, ""amount"": 1889, ""quality"": 0, ""price"": 0.28, ""buyer"": ""Lon Construtora"", ""profit"": 203}"
+2635871691,2025-12-23T19:13:07.267844+00:00,fees,-36,Market fees selling Seeds,"{""version"": 1, ""remaining_fees"": 21}"
+2635871690,2025-12-23T19:13:07.265457+00:00,market,871,Seeds market order partially filled,"{""version"": 1, ""amount"": 3111, ""price"": 0.28, ""buyer"": ""Vespera S.r.l."", ""profit"": 335, ""fees"": 36, ""remaining_fees"": 21, ""quality"": 0, ""resource"": 66}"
+2635869797,2025-12-23T19:11:26.925832+00:00,sales,1028,Sales of Apples,"{""version"": 1, ""building"": ""G"", ""quality"": 1.0, ""price"": 4.98, ""unit_cogs"": 2.6000663790242284, ""remaining"": 2670}"
+2635824810,2025-12-23T18:20:17.070577+00:00,game,500,Achievement - Buyer,{}
+2635824755,2025-12-23T18:20:14.932185+00:00,game,500,Achievement - Retailer,{}
+2635823856,2025-12-23T18:19:02.829420+00:00,market,-7834,Bought Apples on market,"{""version"": 1, ""amount"": 3013, ""price"": 2.6000663790242284, ""sellers"": ""Yellow rFxf""}"
+2635823297,2025-12-23T18:18:14.589608+00:00,sales,544,Sales of Oranges,"{""version"": 1, ""building"": ""G"", ""quality"": 0.0, ""price"": 3.88, ""unit_cogs"": 1.6188344827586207, ""remaining"": 0}"
+2635784622,2025-12-23T17:33:25.784318+00:00,sales,549,Sales of Apples,"{""version"": 1, ""building"": ""G"", ""quality"": 0.0, ""price"": 3.75, ""unit_cogs"": 1.7252666666666665, ""remaining"": 0}"
+2635769475,2025-12-23T17:17:11.906074+00:00,production,-1165,Production of Seeds,"{""version"": 1, ""price"": 0.14262781609195405, ""quality"": 0, ""amount"": 10000}"
+2635757678,2025-12-23T17:04:30.124116+00:00,game,1000,Achievement - Supplier,{}
+2635757618,2025-12-23T17:04:27.719731+00:00,game,100,Achievement - Supplier,{}
+2635757067,2025-12-23T17:03:51.433731+00:00,fees,-92,Market fees selling Water,{}
+2635757066,2025-12-23T17:03:51.431258+00:00,market,2296,Water market order filled,"{""version"": 1, ""resource"": 2, ""amount"": 8200, ""quality"": 0, ""price"": 0.28, ""buyer"": ""Ibeszo"", ""profit"": 61}"
+2635757023,2025-12-23T17:03:49.437337+00:00,fees,-21,Market fees selling Water,"{""version"": 1, ""remaining_fees"": 92}"
+2635757022,2025-12-23T17:03:49.434161+00:00,market,504,Water market order partially filled,"{""version"": 1, ""amount"": 1800, ""price"": 0.28, ""buyer"": ""Jourdan Aerospace"", ""profit"": 12, ""fees"": 21, ""remaining_fees"": 92, ""quality"": 0, ""resource"": 2}"
+2635750063,2025-12-23T16:57:16.863823+00:00,game,250,Achievement - Retailer,{}
+2635748008,2025-12-23T16:55:02.024748+00:00,sales,560,Sales of Oranges,"{""version"": 1, ""building"": ""G"", ""quality"": 0.0, ""price"": 2.88, ""unit_cogs"": 1.7702666666666669, ""remaining"": 0}"
+2635745037,2025-12-23T16:52:14.918008+00:00,production,-112,Production of Oranges,"{""version"": 1, ""price"": 1.6188344827586207, ""quality"": 0, ""amount"": 200}"
+2635744134,2025-12-23T16:51:25.945948+00:00,game,-520,Bought water from trader,{}
+2635722924,2025-12-23T16:29:27.846796+00:00,market,-275,Bought Seeds on market,"{""version"": 1, ""amount"": 1000, ""price"": 0.275, ""sellers"": ""Hammer Industries""}"
+2635707777,2025-12-23T16:12:24.900517+00:00,production,-103,Production of Apples,"{""version"": 1, ""price"": 1.7252666666666665, ""quality"": 0, ""amount"": 200}"
+2635644616,2025-12-23T15:06:41.505275+00:00,production,-168,Production of Oranges,"{""version"": 1, ""price"": 1.7702666666666669, ""quality"": 0, ""amount"": 300}"
+2635644480,2025-12-23T15:06:31.799969+00:00,production,67,Partial return of unpaid wages,"{""version"": 1, ""building"": ""P"", ""cancelled_production"": 106, ""cancelled_amount"": 100}"
+2635640617,2025-12-23T15:02:57.012594+00:00,production,-135,Production of Wood,"{""version"": 1, ""price"": 2.873333333333333, ""quality"": 0, ""amount"": 100}"
+2635640178,2025-12-23T15:02:29.920912+00:00,market,-736,Bought Water on market,"{""version"": 1, ""amount"": 2000, ""price"": 0.368, ""sellers"": ""Azkar Inc.""}"
+2635639898,2025-12-23T15:02:14.216878+00:00,market,-139,Bought Seeds on market,"{""version"": 1, ""amount"": 500, ""price"": 0.278, ""sellers"": ""Hayran123""}"
+2635638293,2025-12-23T15:00:40.582981+00:00,game,50,Achievement - Retailer,{}
+2635638180,2025-12-23T15:00:35.101211+00:00,game,12000,Achievement - Tutorial Finished,{}
+2635637410,2025-12-23T14:59:43.751972+00:00,sales,228,Sales of Apples,"{""version"": 1, ""building"": ""G"", ""quality"": 0.0, ""price"": 7.0, ""unit_cogs"": 1.94, ""remaining"": 0}"
+2635636307,2025-12-23T14:58:31.698261+00:00,production,-26,Production of Apples,"{""version"": 1, ""price"": 1.94, ""quality"": 0, ""amount"": 50}"
+2635635997,2025-12-23T14:58:10.109140+00:00,market,-15,Bought Seeds on market,"{""version"": 1, ""amount"": 50, ""price"": 0.3, ""sellers"": ""MISTER KEBAP""}"
+2635635850,2025-12-23T14:58:01.718830+00:00,market,-56,Bought Water on market,"{""version"": 1, ""amount"": 150, ""price"": 0.37333333333333335, ""sellers"": ""Farming HQ""}"
+2635634551,2025-12-23T14:56:35.918203+00:00,game,500,Starting money,{}
