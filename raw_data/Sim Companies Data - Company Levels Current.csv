@@ -1,0 +1,18 @@
+Company Level,,,,,,
+Levels,Title,Maximum buildings,Order time limit,Specialization,Access,Unlocked
+0,Contractor,4 + 4,20min-5h,-,,12/23/2024
+5,Family business,5 + 4,24h,0.01,"Contracts
+Seasonal",12/23/2024
+10,Sole trader,6 + 4,24h,0.01,"Bonds
+Research",
+15,Sole trader,8 + 4,48h,0.01,Executives,
+20,Limited company,10 + 4,48h,0.01,"Government Orders
+Building Auctions",
+25,Limited company,12 + 4,48h,0.01,,
+30,Limited company,14 + 4,48h,0.01,,
+35,Corporation,14 + 4,48h,0.01,,
+40,Corporation,14 + 4,48h,0.01,,
+45,Corporation,14 + 4,48h,0.01,,
+50,Multinational corporation,14 + 4,48h,0.01,,
+55,Multinational corporation,14 + 4,48h,0.01,,
+60,IPO,14 + 4,48h,0.01,,

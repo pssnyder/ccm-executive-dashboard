@@ -166,5 +166,29 @@
     { "resource": "Reinforced concrete", "quality": 1, "amount": 36, "value": 7488 },
     { "resource": "Bricks", "quality": 4, "amount": 495, "value": 1312 }
   ],
+  "transaction_summary": {
+    "daily_cash_flow": [
+      { "date": "2025-12-23", "sales": 8788, "expenses": -23989, "net": -15201 },
+      { "date": "2025-12-24", "sales": 1782, "expenses": -1179, "net": 603 }
+    ],
+    "revenue_breakdown": {
+      "retail_sales": 8788,
+      "market_sales": 3200,
+      "achievements": 16400
+    },
+    "expense_breakdown": {
+      "production_costs": 2161,
+      "market_purchases": 21771,
+      "market_fees": 227,
+      "trader_purchases": 520
+    },
+    "recent_transactions": [
+      { "timestamp": "2025-12-24T01:05:06Z", "category": "fees", "amount": -57, "description": "Market fees paid for Power order cancellation" },
+      { "timestamp": "2025-12-24T00:54:16Z", "category": "sales", "amount": 1782, "description": "Sales of Apples" },
+      { "timestamp": "2025-12-24T00:36:51Z", "category": "market", "amount": -1122, "description": "Bought Water on market" },
+      { "timestamp": "2025-12-23T23:25:59Z", "category": "production", "amount": -557, "description": "Production of Oranges" },
+      { "timestamp": "2025-12-23T23:25:20Z", "category": "sales", "amount": 601, "description": "Sales of Apples" }
+    ]
+  },
   "last_updated": "2025-12-24T01:18:40Z"
 }

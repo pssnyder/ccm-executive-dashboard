@@ -1,0 +1,12 @@
+Resource,Quality,Amount,Cost labor,Cost management,Cost 3rd party,Cost material 1,Cost material 2,Cost material 3,Cost material 4,Cost material 5
+Power,0,10100,0,0,2328,0,0,0,0,0
+Water,0,100,0,0,37.2165632,0,0,0,0,0
+Oranges,0,5320,2945.809812,42.73586885,0,5885.742699,867.6289442,0,0,0
+Transport,0,4500,0,0,1575,0,0,0,0,0
+Seeds,0,536,48.87965339,0.9796975498,32.89314914,15.36505685,0,0,0,0
+Luxury watch,5,1,0,0,800,0,0,0,0,0
+Reinforced concrete,1,36,0,0,7488,0,0,0,0,0
+Reinforced concrete,3,24,0,0,4992,0,0,0,0,0
+Bricks,0,330,0,0,875,0,0,0,0,0
+Bricks,4,495,0,0,1311.75,0,0,0,0,0
+Planks,1,240,0,0,2664,0,0,0,0,0

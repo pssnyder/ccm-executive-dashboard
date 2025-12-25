@@ -9,14 +9,14 @@ import Archives from './components/Archives';
 import Footer from './components/Footer';
 import Workspace from './components/Workspace';
 import MarketTicker from './components/MarketTicker';
+import { fetchAppData } from './services/dataService';
 
 function App() {
   const [activeTab, setActiveTab] = useState('exec');
   const [appData, setAppData] = useState(null);
 
   useEffect(() => {
-    fetch('/analytical_layer/core_reporting.json')
-      .then(response => response.json())
+    fetchAppData()
       .then(data => setAppData(data))
       .catch(error => console.error("Failed to fetch app data:", error));
   }, []);
@@ -42,7 +42,7 @@ function App() {
           <Workspace appData={appData} />
         </div>
         <div style={{ display: activeTab === 'intel' ? 'block' : 'none' }}>
-          <IntelligenceDesk />
+          <IntelligenceDesk appData={appData} />
         </div>
         <div style={{ display: activeTab === 'vault' ? 'block' : 'none' }}>
           <RaidVault appData={appData} />

@@ -19,6 +19,9 @@ Each data stream is documented with the following attributes:
 - **Consumer Component**: React component that reads this data
 - **Visual Output**: What the user sees on the dashboard
 - **Update Frequency**: How often this data changes
+- **Refresh Availability**: When new data can be obtained from source
+- **Snapshot Frequency**: Recommended collection interval for historical tracking
+- **Retention Policy**: Active data window (90 days) vs. archive storage
 
 ---
 
@@ -34,7 +37,10 @@ Each data stream is documented with the following attributes:
 **Consumer Component**: `Header.jsx`, `ExecutiveSummary.jsx`  
 **Visual Output**:
 - Header: "Book Value" display ($47,425)
-- Executive Summary: Building slots calculation (5 + 4 = 9 total)
+- Executive Summary: Building slots calculation (5 + 4 = 9 total)  
+**Refresh Availability**: Real-time (available in game UI at any time)  
+**Snapshot Frequency**: Daily (end-of-day capture recommended)  
+**Retention Policy**: 90-day active window, archive older snapshots
 - Metadata display (Level 6, Ranking #22008, Rating B-)
 
 **Update Frequency**: Low (changes only when company levels up or significant value shifts occur)
@@ -63,7 +69,10 @@ Each data stream is documented with the following attributes:
 **Future Storage**: Firestore: `companies/{companyId}/financials/balance_sheet`  
 **Consumer Component**: `Header.jsx`, future financial dashboards  
 **Visual Output**:
-- Header: "Cash Pool" display ($12,361)
+- Header: "Cash Pool" display ($12,361)  
+**Refresh Availability**: Daily (game generates balance sheet once per day)  
+**Snapshot Frequency**: Daily (capture each new export, append to history array)  
+**Retention Policy**: 90-day active window, archive older snapshots for long-term analysis
 - Used for progress calculations in Benchmarks tab
 
 **Update Frequency**: Daily (end-of-day snapshot)
@@ -95,7 +104,10 @@ Each data stream is documented with the following attributes:
 **Consumer Component**: `Workspace.jsx`  
 **Visual Output**:
 - Workspace tab: Grid of production cards showing:
-  - Building name and type badge
+  - Building name and type badge  
+**Refresh Availability**: Real-time (manual entry from game UI whenever production changes)  
+**Snapshot Frequency**: Event-driven (capture when production starts/completes, typically 3-10 times per day)  
+**Retention Policy**: Not historicized (current state only, completed operations removed)
   - Product and quantity
   - Cost metrics (total sourcing value, cost per unit)
   - Live countdown timer to completion
@@ -122,7 +134,10 @@ Each data stream is documented with the following attributes:
 ### DS-004: Medium-Term Strategy
 
 **Source**: Manual strategic planning input  
-**Raw Format**: Text description of current strategic focus  
+**Raw Format**: Text description of current strategic focus    
+**Refresh Availability**: Ad-hoc (manual strategic review)  
+**Snapshot Frequency**: Weekly or monthly (version history optional)  
+**Retention Policy**: Current state only (historical versions not critical)
 **Transformation**: Direct text entry → JSON string  
 **Current Storage**: `core_reporting.json → operations.medium_term_strategy`  
 **Future Storage**: Firestore: `companies/{companyId}/strategy/current_focus`  
@@ -150,7 +165,10 @@ Each data stream is documented with the following attributes:
 **Current Storage**: `core_reporting.json → long_term_goals{}`  
 **Future Storage**: Firestore: `companies/{companyId}/strategy/long_term_goals`  
 **Consumer Component**: `Benchmarks.jsx`  
-**Visual Output**:
+**Visual Output**:  
+**Refresh Availability**: Ad-hoc (manual entry when building costs or priorities change)  
+**Snapshot Frequency**: Event-driven (when new goals added or costs recalculated)  
+**Retention Policy**: Current state only (progress calculated from balance sheet history)
 - Benchmarks tab: Grid of goal cards showing:
   - Goal label (e.g., "Power (L1)")
   - Total cost with inflation
@@ -194,7 +212,10 @@ Each data stream is documented with the following attributes:
 2. Sum all cost columns to calculate total value per resource
 3. Convert to simplified JSON array
 
-**Current Storage**: `core_reporting.json → inventory[]`  
+**Current Storage**: `core_reporting.json → inventory[]`    
+**Refresh Availability**: Real-time (game UI export available at any time)  
+**Snapshot Frequency**: Intraday (2-4 times per day during active trading) + daily end-of-day  
+**Retention Policy**: 90-day active window for trend analysis, archive older snapshots
 **Future Storage**: Firestore: `companies/{companyId}/inventory/current`  
 **Consumer Component**: `RaidVault.jsx` (Warehouse tab)  
 **Visual Output**:
@@ -229,7 +250,10 @@ JSON: { "resource": "Power", "quality": 0, "amount": 10100, "value": 2328 }
 ---
 
 ### DS-007: Live Market Data
-
+  
+**Refresh Availability**: Continuous (API updates every few minutes)  
+**Snapshot Frequency**: Live polling (every 30 minutes recommended for hosted version)  
+**Retention Policy**: Optional historical cache for price trend analysis (90-day window)
 **Source**: SimCo Tools API (`https://api.simcotools.com/v1/realms/0/market/prices`)  
 **Raw Format**: JSON array with market prices for all resources  
 **Transformation**: 
@@ -249,7 +273,10 @@ JSON: { "resource": "Power", "quality": 0, "amount": 10100, "value": 2328 }
 **Data Fields** (API Response):
 ```json
 {
-  "kind": "Oranges",
+  "kind": "Oranges",  
+**Refresh Availability**: Daily (market prices from API) + ad-hoc (production cost updates)  
+**Snapshot Frequency**: Daily (append new market price to history array)  
+**Retention Policy**: 90-day active price history, archive older for long-term analysis
   "price": 4.45,
   "quality": 0
 }
