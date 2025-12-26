@@ -1,33 +1,54 @@
 // Data Service Layer - Provides fallback cascade for data fetching
-// Cascade order: Google Sheets API → Local JSON → Embedded Static → Error
+// Cascade order: localStorage Cache → Google Sheets API (manual refresh) → Embedded Static
 
 import staticData from '../../analytical_layer/core_reporting.json';
-import { fetchDataFromGoogleSheets } from './googleSheetsService';
+import { fetchDataFromGoogleSheets, loadCachedData } from './googleSheetsService';
 
 /**
  * Merges Google Sheets data with static/manual data
- * Google Sheets provides: financials, inventory, historical data
- * Static data provides: operations (short_term), long_term_goals, commodities
+ * Google Sheets data takes priority - static data is only used as fallback
  */
 function mergeWithStaticData(sheetsData) {
   return {
     ...sheetsData,
-    // Preserve manually-managed fields from static data
-    operations: staticData.operations || sheetsData.operations,
-    long_term_goals: staticData.long_term_goals || sheetsData.long_term_goals,
-    commodities: staticData.commodities || sheetsData.commodities,
-    transaction_summary: staticData.transaction_summary || sheetsData.transaction_summary
+    // Use Google Sheets data if available, fallback to static only if missing
+    operations: sheetsData.operations || staticData.operations,
+    long_term_goals: sheetsData.long_term_goals || staticData.long_term_goals,
+    commodities: sheetsData.commodities || staticData.commodities,
+    transaction_summary: sheetsData.transaction_summary || staticData.transaction_summary
   };
 }
 
 /**
  * Fetches application data with automatic fallback cascade
+ * @param {boolean} forceRefresh - If true, forces fetch from Google Sheets
  * @returns {Promise<Object>} Application data object
  */
-export async function fetchAppData() {
-  // Try Google Sheets first (if configured)
+export async function fetchAppData(forceRefresh = false) {
+  // If forcing refresh, fetch from Google Sheets
+  if (forceRefresh) {
+    try {
+      const sheetsData = await fetchDataFromGoogleSheets(true);
+      const mergedData = mergeWithStaticData(sheetsData);
+      console.log('[DataService] Refreshed data from Google Sheets');
+      return mergedData;
+    } catch (error) {
+      console.error('[DataService] Failed to refresh from Google Sheets:', error);
+      // Fall through to cache/static
+    }
+  }
+
+  // Try localStorage cache first
+  const cachedData = loadCachedData();
+  if (cachedData) {
+    const mergedData = mergeWithStaticData(cachedData);
+    console.log('[DataService] Using cached data');
+    return mergedData;
+  }
+
+  // Try Google Sheets if no cache exists (first load)
   try {
-    const sheetsData = await fetchDataFromGoogleSheets();
+    const sheetsData = await fetchDataFromGoogleSheets(false);
     const mergedData = mergeWithStaticData(sheetsData);
     console.log('[DataService] Loaded data from Google Sheets');
     return mergedData;

@@ -15,13 +15,13 @@ const Header = ({ appData }) => {
         </div>
         <div>
           <h1 className="text-3xl font-bold text-white tracking-tighter italic">CASSANDRA CAPITAL</h1>
-          <p className="text-[10px] text-indigo-400 tracking-[0.4em] uppercase">Master Terminal v8.0 // Node_Farm_Secure</p>
+          <p className="text-[10px] text-indigo-400 tracking-[0.4em] uppercase">Quantifying the inevitable.</p>
         </div>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full md:w-auto">
         <div className="text-center px-4 border-r border-slate-800">
-          <span className="text-[9px] uppercase font-bold text-slate-500 block">Cash Pool</span>
+          <span className="text-[9px] uppercase font-bold text-slate-500 block">Cash on Hand</span>
           <span className="text-xl text-white font-bold">${cash.toLocaleString()}</span>
         </div>
         <div className="text-center px-4 border-r border-slate-800">
@@ -33,9 +33,9 @@ const Header = ({ appData }) => {
           <span className="text-xl text-blue-400 font-bold uppercase">Normal</span>
         </div>
         <div className="text-center px-4">
-          <span className="text-[9px] uppercase font-bold text-slate-500 block">Network Status</span>
+          <span className="text-[9px] uppercase font-bold text-slate-500 block">Business Status</span>
           <span className="text-xs text-green-400 font-bold flex items-center justify-center gap-2">
-            <span className="status-pulse"></span> ONLINE
+            <span className="status-pulse"></span> OPERATIONAL
           </span>
         </div>
       </div>

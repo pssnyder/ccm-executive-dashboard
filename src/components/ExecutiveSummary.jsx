@@ -3,13 +3,14 @@ import React from 'react';
 const ExecutiveSummary = ({ appData }) => {
   const companyOverview = appData?.company_overview;
   const mediumTermStrategy = appData?.operations?.medium_term_strategy;
+  const currentBuildings = appData?.current_buildings_owned || [];
 
-  // Calculate open slots: (max_buildings) - (current buildings)
-  // Assuming current buildings = 3 (Farm, Grocery, Office)
+  // Calculate open slots: (max_buildings) - (current buildings owned)
   const maxBuildings = parseInt(companyOverview?.max_buildings?.split(' + ')[0] || '0', 10);
   const bonusBuildings = parseInt(companyOverview?.max_buildings?.split(' + ')[1] || '0', 10);
   const totalSlots = maxBuildings + bonusBuildings;
-  const openSlots = totalSlots - 3;
+  const ownedBuildingsCount = currentBuildings.length;
+  const openSlots = totalSlots - ownedBuildingsCount;
 
 
   return (

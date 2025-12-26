@@ -1,0 +1,5 @@
+Goal ID,Label,Total Cost,Cost Inflation,Status,Benefit,Requirements (JSON)
+power_plant,Power (L1),58127,6377,Primary Target,Produces 2566.94 units/hour,"{""time_to_build"":""3h"",""wages_per_hour"":414,""reinforced_concrete"":60,""bricks"":825,""planks"":240,""construction_units"":15}"
+bank,Bank (L1),155479,17479,Secondary Target,Boosts accounting by $50k per level,"{""time_to_build"":""8h"",""reinforced_concrete"":160,""bricks"":2200,""planks"":640,""construction_units"":40}"
+academy,Academy (L1),73793,8243,Tertiary Target,Improves executive training,"{""time_to_build"":""8h"",""reinforced_concrete"":76,""bricks"":1045,""planks"":304,""construction_units"":19}"
+software_rd,SaaS (L1),73713,8163,Stretch Goal,Improves quality of high-tech products,"{""time_to_build"":""3h"",""wages_per_hour"":587,""reinforced_concrete"":76,""bricks"":1045,""planks"":304,""construction_units"":19}"

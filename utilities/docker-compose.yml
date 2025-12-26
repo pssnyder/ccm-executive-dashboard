@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  # NocoDB - Database UI and data management
+  nocodb:
+    image: nocodb/nocodb:latest
+    container_name: ccm-nocodb
+    ports:
+      - "8080:8080"
+    environment:
+      NC_DB: "pg://postgres:5432?u=nocodb&p=nocodb&d=nocodb"
+      NC_AUTH_JWT_SECRET: "ccm-secret-key-change-in-production"
+    volumes:
+      - nocodb_data:/usr/app/data
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+  # Metabase - Business Intelligence and Visualization
+  metabase:
+    image: metabase/metabase:latest
+    container_name: ccm-metabase
+    ports:
+      - "3000:3000"
+    environment:
+      MB_DB_TYPE: postgres
+      MB_DB_DBNAME: metabase
+      MB_DB_PORT: 5432
+      MB_DB_USER: metabase
+      MB_DB_PASS: metabase
+      MB_DB_HOST: postgres
+    volumes:
+      - metabase_data:/metabase-data
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+  # PostgreSQL - Shared database for NocoDB and Metabase
+  postgres:
+    image: postgres:15-alpine
+    container_name: ccm-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+    restart: unless-stopped
+
+  # Jupyter Lab - Python data exploration and calculations
+  jupyter:
+    image: jupyter/datascience-notebook:latest
+    container_name: ccm-jupyter
+    ports:
+      - "8888:8888"
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+      GRANT_SUDO: "yes"
+    volumes:
+      - ./notebooks:/home/jovyan/work
+      - ./data:/home/jovyan/data
+      - ./scripts:/home/jovyan/scripts
+    restart: unless-stopped
+    command: start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''
+
+volumes:
+  nocodb_data:
+  metabase_data:
+  postgres_data:

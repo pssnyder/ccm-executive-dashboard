@@ -1,11 +1,33 @@
 import React, { useState, useEffect } from 'react';
 
 const Countdown = ({ to }) => {
-  const [time, setTime] = useState(new Date(to) - new Date());
+  // Parse the finish time as EST and get current EST time
+  const getESTTime = () => {
+    const now = new Date();
+    // Convert current time to EST (UTC-5)
+    const estOffset = -5 * 60; // EST is UTC-5
+    const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+    const estNow = new Date(utc + (estOffset * 60000));
+    return estNow;
+  };
+
+  const parseESTDate = (dateString) => {
+    // Parse the date string assuming it's in EST
+    const date = new Date(dateString);
+    return date;
+  };
+
+  const [time, setTime] = useState(() => {
+    const finishTime = parseESTDate(to);
+    const currentTime = getESTTime();
+    return finishTime - currentTime;
+  });
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTime(new Date(to) - new Date());
+      const finishTime = parseESTDate(to);
+      const currentTime = getESTTime();
+      setTime(finishTime - currentTime);
     }, 1000);
     return () => clearInterval(timer);
   }, [to]);
@@ -53,9 +75,9 @@ const Workspace = ({ appData }) => {
               <span className="text-[9px] bg-slate-700 px-2 py-0.5 rounded text-slate-300">{op.product}</span>
             </div>
             <div className="text-center my-4">
-              <span className="text-3xl font-bold text-white">{op.quantity.toLocaleString()}</span>
+              <span className="text-3xl font-bold text-white">{(op.quantity || 0).toLocaleString()}</span>
               <span className="text-[10px] text-slate-400 block uppercase">
-                {op.type === 'FARM' ? `Value: $${op.sourcing_value.toLocaleString()}` : `Revenue: $${op.projected_revenue.toLocaleString()}`}
+                {op.type === 'FARM' ? `Value: $${(op.sourcing_value || 0).toLocaleString()}` : `Revenue: $${(op.projected_revenue || 0).toLocaleString()}`}
               </span>
             </div>
             <div className="text-center text-xs text-cyan-400 font-mono">
