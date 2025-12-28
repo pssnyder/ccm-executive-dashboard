@@ -1,0 +1,13 @@
+Commodity,Date,Priority,Market Price,Average Retail Price,Quality,Sourcing Cost Per Unit,Water Per Unit,Power Per Unit,Seeds Per Unit,Diesel Per Unit,Gold Ore Per Unit,Production Units Per Hour,Production Wages Per Hour,Worker Cost Per Unit,Admin Cost Per Unit,Units Sold An Hour,Revenue Per Unit (less wages),Dependency Building(s),Notes
+oranges,2025-12-27,High,2.95,7.17,0,,3.00,-,1.00,-,-,186.01,104.00,0.56,0.01,67.21,5.08,"Farm, Grocery Store",
+grapes,2025-12-27,High,2.80,8.33,0,,4.00,-,1.00,-,-,161.75,104.00,0.64,0.01,57.2,5.88,"Farm, Grocery Store",
+power,2025-12-25,Low,0.27,-,2,,-,-,-,-,-,2566.94,414.00,0.16,0.00,-,-,Power Plant,Needed for manufacturing processes.
+energy research,2025-12-27,Medium,208.00,-,0,,-,-,-,-,-,3.30,587.00,177.52,2.09,-,-,Physics Laboratory,Improves quality of power based commodities
+gold ore,2025-12-25,Low,32.50,-,0,,2.00,80.00,-,-,-,49.96,276.00,5.52,0.10,-,-,Mine,Needed for golden bars
+mining research,2025-12-26,Low,232.00,-,0,,-,-,-,-,-,3.00,587.00,195.27,2.30,-,-,Physics Laboratory,Improves  quality of mined resources
+software,2025-12-25,High,109.00,-,0,90.87,-,-,-,-,-,6.56,587.00,89.29,1.05,-,-,Software R&D,"improves quality of Smart phones, Tablets, Laptops, Monitors, Televisions, On-board computer, Flight computer, Robots"
+electronics research,2025-12-26,Medium,292.00,-,0,,-,-,-,-,-,2.40,587.00,244.09,2.87,-,-,Physics Laboratory,Improves quality of electronic components
+golden bars,2025-12-25,Medium,6500.00,-,0,,,40.00,-,-,200.00,29.95,414.00,13.82,0.24,-,-,Factory,"Needed for Luxury watch, Necklace, High grade e-comps, Luxury jet"
+transport,2025-12-27,High,0.40,-,0,,-,0.01,-,0.005,-,3173.95,311.00,0.10,0.00,-,-,Shipping Depot,Required for exchange trades of commodities
+water,2025-12-27,Low,0.37,-,0,,-,0.20,-,-,-,1626.43,345.00,0.21,0.00,-,-,Water Reservoir,Needed for most farming and organic production.
+seeds,2025-12-27,Low,0.29,-,0,,0.10,-,-,-,-,889.63,104.00,0.12,0.00,-,-,Farm,Needed for Farming

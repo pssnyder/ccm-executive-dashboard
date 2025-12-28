@@ -96,8 +96,8 @@ function AppContent() {
       <div className="scanline"></div>
       <div className="max-w-7xl mx-auto space-y-6">
         <MarketTicker 
-          key={marketTickerKey}
-          commodityFilter={Object.keys(appData?.commodities || {})}
+          commodityData={appData?.commodity_analysis || []}
+          commodityFilter={[]}
         />
         
         {/* Refresh Buttons */}

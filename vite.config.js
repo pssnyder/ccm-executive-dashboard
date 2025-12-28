@@ -6,10 +6,9 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': {
-        target: 'https://api.simcotools.com/v1',
+      '/simcoApi': {
+        target: 'http://127.0.0.1:5001/rts-labs-f3981/us-central1',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
   },

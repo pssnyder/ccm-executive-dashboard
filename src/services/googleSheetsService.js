@@ -31,7 +31,10 @@ const SHEETS = {
   STRATEGIC_GOALS: 'Strategic Goals Current',
   CURRENT_BUILDINGS_OWNED: 'Buildings Owned Current',
   STRATEGY_NOTES: 'Strategy Notes Current',
-  TRANSACTION_HISTORY: 'Transaction History'
+  TRANSACTION_HISTORY: 'Transaction History',
+  
+  // Commodity and market analysis
+  COMMODITY_ANALYSIS: 'Commodity Analysis Current'
 };
 
 /**
@@ -240,6 +243,7 @@ export async function fetchDataFromGoogleSheets(forceRefresh = false) {
     const currentBuildingsOwned = sheetsData[SHEETS.CURRENT_BUILDINGS_OWNED] || [];
     const strategyNotes = sheetsData[SHEETS.STRATEGY_NOTES] || [];
     const transactionHistory = sheetsData[SHEETS.TRANSACTION_HISTORY] || [];
+    const commodityAnalysis = sheetsData[SHEETS.COMMODITY_ANALYSIS] || [];
 
     // Get latest records from historical datasets (CSVs are newest-first)
     const getLatest = (arr, count = 90) => arr.slice(0, count);
@@ -380,13 +384,24 @@ export async function fetchDataFromGoogleSheets(forceRefresh = false) {
       long_term_goals: strategicGoals.reduce((acc, row) => {
         const goalId = (row['Goal ID'] || '').toLowerCase().replace(/\s+/g, '_');
         if (goalId) {
+          let requirements = {};
+          try {
+            if (row['Requirements (JSON)']) {
+              requirements = JSON.parse(row['Requirements (JSON)']);
+            }
+          } catch (jsonError) {
+            console.error(`[GoogleSheetsService] Invalid JSON in Strategic Goals row "${row['Label']}" (Goal ID: ${row['Goal ID']}):`, jsonError.message);
+            console.error('Problematic JSON string:', row['Requirements (JSON)']);
+            // Continue with empty requirements object
+          }
+          
           acc[goalId] = {
             label: row['Label'],
             total_cost: parseFloat(row['Total Cost'] || 0),
             cost_inflation: parseFloat(row['Cost Inflation'] || 0),
             status: row['Status'],
             benefit: row['Benefit'],
-            requirements: row['Requirements (JSON)'] ? JSON.parse(row['Requirements (JSON)']) : {}
+            requirements: requirements
           };
         }
         return acc;
@@ -398,7 +413,31 @@ export async function fetchDataFromGoogleSheets(forceRefresh = false) {
         level: parseInt(row['Level'] || 1)
       })),
       
-      // Commodity analysis data (placeholder - sheet not available)
+      // Commodity analysis data from Google Sheets
+      commodity_analysis: commodityAnalysis.map(row => ({
+        commodity: row['Commodity'],
+        date: row['Date'],
+        priority: row['Priority'],
+        market_price: parseFloat(row['Market Price'] || 0),
+        average_retail_price: parseFloat(row['Average Retail Price'] || 0),
+        quality: parseFloat(row['Quality'] || 0),
+        sourcing_cost_per_unit: parseFloat(row['Sourcing Cost Per Unit'] || 0),
+        water_per_unit: parseFloat(row['Water Per Unit'] || 0),
+        power_per_unit: parseFloat(row['Power Per Unit'] || 0),
+        seeds_per_unit: parseFloat(row['Seeds Per Unit'] || 0),
+        diesel_per_unit: parseFloat(row['Diesel Per Unit'] || 0),
+        gold_ore_per_unit: parseFloat(row['Gold Ore Per Unit'] || 0),
+        production_units_per_hour: parseFloat(row['Production Units Per Hour'] || 0),
+        production_wages_per_hour: parseFloat(row['Production Wages Per Hour'] || 0),
+        worker_cost_per_unit: parseFloat(row['Worker Cost Per Unit'] || 0),
+        admin_cost_per_unit: parseFloat(row['Admin Cost Per Unit'] || 0),
+        units_sold_an_hour: parseFloat(row['Units Sold An Hour'] || 0),
+        revenue_per_unit: parseFloat(row['Revenue Per Unit (less wages)'] || 0),
+        dependency_buildings: row['Dependency Building(s)'],
+        notes: row['Notes']
+      })),
+      
+      // Legacy commodities object (for backward compatibility)
       commodities: {},
 
       transaction_summary: {

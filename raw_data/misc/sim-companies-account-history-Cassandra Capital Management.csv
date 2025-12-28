@@ -1,4 +1,48 @@
 id,Timestamp,Category,Money,Description,Details
+2642060011,2025-12-28T01:02:43.750425+00:00,sales,1812,Sales of Grapes,"{""version"": 1, ""building"": ""G"", ""quality"": 0.0, ""price"": 7.99, ""unit_cogs"": 2.95047341587764, ""remaining"": 6011}"
+2642059979,2025-12-28T01:02:42.783908+00:00,sales,1725,Sales of Grapes,"{""version"": 1, ""building"": ""G"", ""quality"": 0.0, ""price"": 7.99, ""unit_cogs"": 2.900218499635834, ""remaining"": 6079}"
+2642059964,2025-12-28T01:02:42.182441+00:00,sales,1873,Sales of Oranges,"{""version"": 1, ""building"": ""G"", ""quality"": 0.7825814536340853, ""price"": 6.99, ""unit_cogs"": 2.7393483709273183, ""remaining"": 6133}"
+2641604950,2025-12-27T20:08:40.187213+00:00,production,-7815,Production of Software,"{""version"": 1, ""price"": 90.87209302325581, ""quality"": 0, ""amount"": 86}"
+2641598868,2025-12-27T20:03:04.455768+00:00,market,-3982,Bought Grapes on market,"{""version"": 1, ""amount"": 1373, ""price"": 2.900218499635834, ""sellers"": ""APDHP""}"
+2641598256,2025-12-27T20:02:34.397923+00:00,construction,0,Building expansion finished,"{""version"": 1, ""building"": ""G"", ""level"": 1}"
+2641585499,2025-12-27T19:49:20.050534+00:00,construction,0,Building expansion finished,"{""version"": 1, ""building"": ""G"", ""level"": 1}"
+2641585129,2025-12-27T19:48:47.113864+00:00,market,-4051,Bought Grapes on market,"{""version"": 1, ""amount"": 1373, ""price"": 2.95047341587764, ""sellers"": ""CatGirls Anonymous""}"
+2641581137,2025-12-27T19:43:45.754099+00:00,market,-4372,Bought Oranges on market,"{""version"": 1, ""amount"": 1596, ""price"": 2.7393483709273183, ""sellers"": ""Bolex Inc, Rumbie Tan Investments""}"
+2641545579,2025-12-27T19:03:38.696845+00:00,fees,-436,Market fees selling Software,{}
+2641545578,2025-12-27T19:03:38.690816+00:00,market,10900,Software market order filled,"{""version"": 1, ""resource"": 35, ""amount"": 100, ""quality"": 0, ""price"": 109.0, ""buyer"": ""Gustloff Werke"", ""profit"": 1429}"
+2641264662,2025-12-27T14:02:33.802571+00:00,sales,3973,Sales of Oranges,"{""version"": 1, ""building"": ""G"", ""quality"": 0.0, ""price"": 6.99, ""unit_cogs"": 1.8502203450200434, ""remaining"": 0}"
+2640803317,2025-12-27T04:21:53.811243+00:00,construction,0,Building expansion finished,"{""version"": 1, ""building"": ""M"", ""level"": 1}"
+2640686484,2025-12-27T02:22:57.048978+00:00,sales,772,Sales of Oranges,"{""version"": 1, ""building"": ""G"", ""quality"": 0.0, ""price"": 6.99, ""unit_cogs"": 1.8502203450200434, ""remaining"": 3973}"
+2640605500,2025-12-27T00:22:34.743154+00:00,fees,-182,Market fees selling Software,{}
+2640605499,2025-12-27T00:22:34.740745+00:00,market,4536,Software market order filled,"{""version"": 1, ""resource"": 35, ""amount"": 42, ""quality"": 0, ""price"": 108.0, ""buyer"": ""WHITESEA"", ""profit"": 559}"
+2640597023,2025-12-27T00:10:55.415516+00:00,market,-13650,Bought Construction units on market,"{""version"": 1, ""amount"": 5, ""price"": 2730.0, ""sellers"": ""Wansell""}"
+2640597015,2025-12-27T00:10:54.922804+00:00,market,-880,Bought Planks on market,"{""version"": 1, ""amount"": 80, ""price"": 11.0, ""sellers"": ""Toth s.r.o""}"
+2640597008,2025-12-27T00:10:54.643520+00:00,market,-715,Bought Bricks on market,"{""version"": 1, ""amount"": 275, ""price"": 2.6, ""sellers"": ""michulino916""}"
+2640597001,2025-12-27T00:10:54.276986+00:00,market,-4160,Bought Reinforced concrete on market,"{""version"": 1, ""amount"": 20, ""price"": 208.0, ""sellers"": ""Lundquist Ltd""}"
+2640595291,2025-12-27T00:08:27.717162+00:00,sales,603,Sales of Oranges,"{""version"": 1, ""building"": ""G"", ""quality"": 0.0, ""price"": 6.99, ""unit_cogs"": 1.8502203450200434, ""remaining"": 4745}"
+2640345898,2025-12-26T23:18:18.521053+00:00,fees,-188,Market fees selling Oranges,{}
+2640345897,2025-12-26T23:18:18.518442+00:00,market,4677,Oranges market order filled,"{""version"": 1, ""resource"": 4, ""amount"": 1799, ""quality"": 0, ""price"": 2.6, ""buyer"": ""Oebi International"", ""profit"": 1130}"
+2640343567,2025-12-26T23:14:58.611880+00:00,market,-700,Bought Transport on market,"{""version"": 1, ""amount"": 1799, ""price"": 0.38910505836575876, ""sellers"": ""Materia Prima Inc""}"
+2640299911,2025-12-26T22:23:37.084293+00:00,sales,1635,Sales of Oranges,"{""version"": 1, ""building"": ""G"", ""quality"": 0.0, ""price"": 6.99, ""unit_cogs"": 1.8502203450200434, ""remaining"": 5348}"
+2640039876,2025-12-26T17:38:57.148503+00:00,sales,1286,Sales of Oranges,"{""version"": 1, ""building"": ""G"", ""quality"": 0.0, ""price"": 6.99, ""unit_cogs"": 1.8502203450200434, ""remaining"": 6983}"
+2640039832,2025-12-26T17:38:53.440729+00:00,production,-13552,Production of Software,"{""version"": 1, ""price"": 90.34666666666666, ""quality"": 0, ""amount"": 150}"
+2640017111,2025-12-26T17:12:57.226401+00:00,construction,0,Building expansion finished,"{""version"": 1, ""building"": ""s"", ""level"": 1}"
+2639852872,2025-12-26T14:20:35.594386+00:00,game,20000,Achievement - Buyer,{}
+2639839330,2025-12-26T14:06:32.660793+00:00,market,-40650,Bought Construction units on market,"{""version"": 1, ""amount"": 15, ""price"": 2710.0, ""sellers"": ""AA. AA""}"
+2639839062,2025-12-26T14:06:10.649885+00:00,fees,-1484,Market fees selling Oranges,{}
+2639839061,2025-12-26T14:06:10.647818+00:00,market,37100,Oranges market order filled,"{""version"": 1, ""resource"": 4, ""amount"": 14000, ""quality"": 0, ""price"": 2.65, ""buyer"": ""GlobalSynergy.Group.Holdings"", ""profit"": 9712}"
+2639837084,2025-12-26T14:04:10.206196+00:00,market,-4241,Bought Transport on market,"{""version"": 1, ""amount"": 10654, ""price"": 0.3980664539140229, ""sellers"": ""IWeToddEd2""}"
+2639827012,2025-12-26T13:53:33.199904+00:00,game,5000,Achievement - Supplier,{}
+2639467097,2025-12-26T07:04:24.891480+00:00,sales,1631,Sales of Oranges,"{""version"": 1, ""building"": ""G"", ""quality"": 0.0, ""price"": 6.99, ""unit_cogs"": 1.8399060418389395, ""remaining"": 0}"
+2639391425,2025-12-26T05:05:05.071951+00:00,sales,1948,Sales of Xmas ornament,"{""version"": 1, ""building"": ""u"", ""quality"": 2.0, ""price"": 28.8, ""unit_cogs"": 19.702380952380953, ""remaining"": 0}"
+2639278271,2025-12-26T03:10:36.761137+00:00,fees,-133,Market fees selling Seeds,{}
+2639278270,2025-12-26T03:10:36.759482+00:00,market,3322,Seeds market order filled,"{""version"": 1, ""resource"": 66, ""amount"": 11536, ""quality"": 0, ""price"": 0.288, ""buyer"": ""Guangzhou Minglian"", ""profit"": 1392}"
+2639269698,2025-12-26T02:58:15.402598+00:00,market,-1655,Bought Xmas ornament on market,"{""version"": 1, ""amount"": 84, ""price"": 19.702380952380953, ""sellers"": ""Fadacai Inc""}"
+2639260470,2025-12-26T02:42:37.075250+00:00,sales,597,Sales of Xmas ornament,"{""version"": 1, ""building"": ""u"", ""quality"": 2.0, ""price"": 28.0, ""unit_cogs"": 19.8, ""remaining"": 0}"
+2639231074,2025-12-26T01:59:03.180523+00:00,sales,936,Sales of Xmas ornament,"{""version"": 1, ""building"": ""u"", ""quality"": 2.0, ""price"": 28.0, ""unit_cogs"": 19.8, ""remaining"": 597}"
+2639231062,2025-12-26T01:59:02.737509+00:00,sales,712,Sales of Oranges,"{""version"": 1, ""building"": ""G"", ""quality"": 0.0, ""price"": 6.99, ""unit_cogs"": 1.8399060418389395, ""remaining"": 1631}"
+2639212807,2025-12-26T01:31:03.237689+00:00,production,-2254,Production of Oranges,"{""version"": 1, ""price"": 1.8677099330012112, ""quality"": 0, ""amount"": 4000}"
+2639212793,2025-12-26T01:31:01.667104+00:00,market,-4593,Bought Water on market,"{""version"": 1, ""amount"": 12000, ""price"": 0.38275, ""sellers"": ""NextGen innovations, KPMrzn Corp""}"
 2639196075,2025-12-26T01:08:08.369769+00:00,sales,1090,Sales of Xmas ornament,"{""version"": 1, ""building"": ""u"", ""quality"": 2.0, ""price"": 28.0, ""unit_cogs"": 19.8, ""remaining"": 1533}"
 2639191100,2025-12-26T01:02:26.616705+00:00,fees,-21,Market fees selling Power,{}
 2639191099,2025-12-26T01:02:26.611310+00:00,market,538,Power market order filled,"{""version"": 1, ""resource"": 1, ""amount"": 1978, ""quality"": 0, ""price"": 0.272, ""buyer"": ""Motors SRKK MS LTDA"", ""profit"": 61}"
