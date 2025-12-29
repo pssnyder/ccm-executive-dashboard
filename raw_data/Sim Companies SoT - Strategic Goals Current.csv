@@ -1,0 +1,5 @@
+Goal ID,Label,Total Cost,Cost Inflation,Status,Benefit,Requirements (JSON)
+bank,Bank (L1),155479,17479,Primary Target,Boosts accounting by $50k per level,"{""time_to_build"":""8h"",""reinforced_concrete"":160,""bricks"":2200,""planks"":640,""construction_units"":40}"
+academy,Academy (L1),73793,8243,Secondary Target,Improves executive training,"{""time_to_build"":""8h"",""reinforced_concrete"":76,""bricks"":1045,""planks"":304,""construction_units"":19}"
+physics laboratory,Physics Lab (L1),184630,19030,Tertary Target,"Provides energy, mining, and electronics research","{""time_to_build"":""7h"",""reinforced_concrete"":192,""bricks"":2640,""planks"":768,""construction_units"":48}"
+software r&d,Software R&D (L2),73980,8430,Upgrade Target,Increases software production speed by 100%,"{""time_to_build"":""3h"",""reinforced_concrete"":76,""bricks"":1045,""planks"":304,""construction_units"":19}"
