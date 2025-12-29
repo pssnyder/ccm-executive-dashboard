@@ -29,12 +29,11 @@ const SHEETS = {
   // New required sheets for dashboard features
   ACTIVE_OPERATIONS: 'Active Operations Current',
   STRATEGIC_GOALS: 'Strategic Goals Current',
-  CURRENT_BUILDINGS_OWNED: 'Buildings Owned Current',
   STRATEGY_NOTES: 'Strategy Notes Current',
   TRANSACTION_HISTORY: 'Transaction History',
   
-  // Commodity and market analysis
-  COMMODITY_ANALYSIS: 'Commodity Analysis Current'
+  // Retail market analysis
+  RETAIL_RESEARCH: 'Retail Research'
 };
 
 /**
@@ -240,10 +239,9 @@ export async function fetchDataFromGoogleSheets(forceRefresh = false) {
     const companyLevels = sheetsData[SHEETS.COMPANY_LEVELS] || [];
     const activeOperations = sheetsData[SHEETS.ACTIVE_OPERATIONS] || [];
     const strategicGoals = sheetsData[SHEETS.STRATEGIC_GOALS] || [];
-    const currentBuildingsOwned = sheetsData[SHEETS.CURRENT_BUILDINGS_OWNED] || [];
     const strategyNotes = sheetsData[SHEETS.STRATEGY_NOTES] || [];
     const transactionHistory = sheetsData[SHEETS.TRANSACTION_HISTORY] || [];
-    const commodityAnalysis = sheetsData[SHEETS.COMMODITY_ANALYSIS] || [];
+    const retailResearch = sheetsData[SHEETS.RETAIL_RESEARCH] || [];
 
     // Get latest records from historical datasets (CSVs are newest-first)
     const getLatest = (arr, count = 90) => arr.slice(0, count);
@@ -407,33 +405,33 @@ export async function fetchDataFromGoogleSheets(forceRefresh = false) {
         return acc;
       }, {}),
       
-      current_buildings_owned: currentBuildingsOwned.map(row => ({
-        building_name: row['Building Name'],
-        building_type: row['Building Type'],
+      current_buildings_owned: activeOperations.map(row => ({
+        building_name: row['Building'],
+        building_type: row['Type'],
         level: parseInt(row['Level'] || 1)
       })),
       
-      // Commodity analysis data from Google Sheets
-      commodity_analysis: commodityAnalysis.map(row => ({
-        commodity: row['Commodity'],
-        date: row['Date'],
+      // Retail research data from Google Sheets (replaces Commodity Analysis)
+      commodity_analysis: retailResearch.map(row => ({
+        commodity: row['Name'],
+        date: new Date().toISOString(),
         priority: row['Priority'],
         market_price: parseFloat(row['Market Price'] || 0),
-        average_retail_price: parseFloat(row['Average Retail Price'] || 0),
-        quality: parseFloat(row['Quality'] || 0),
-        sourcing_cost_per_unit: parseFloat(row['Sourcing Cost Per Unit'] || 0),
-        water_per_unit: parseFloat(row['Water Per Unit'] || 0),
-        power_per_unit: parseFloat(row['Power Per Unit'] || 0),
-        seeds_per_unit: parseFloat(row['Seeds Per Unit'] || 0),
-        diesel_per_unit: parseFloat(row['Diesel Per Unit'] || 0),
-        gold_ore_per_unit: parseFloat(row['Gold Ore Per Unit'] || 0),
-        production_units_per_hour: parseFloat(row['Production Units Per Hour'] || 0),
-        production_wages_per_hour: parseFloat(row['Production Wages Per Hour'] || 0),
-        worker_cost_per_unit: parseFloat(row['Worker Cost Per Unit'] || 0),
-        admin_cost_per_unit: parseFloat(row['Admin Cost Per Unit'] || 0),
-        units_sold_an_hour: parseFloat(row['Units Sold An Hour'] || 0),
-        revenue_per_unit: parseFloat(row['Revenue Per Unit (less wages)'] || 0),
-        dependency_buildings: row['Dependency Building(s)'],
+        average_retail_price: parseFloat(row['Retail Price'] || 0),
+        quality: 0,
+        sourcing_cost_per_unit: 0,
+        water_per_unit: 0,
+        power_per_unit: 0,
+        seeds_per_unit: 0,
+        diesel_per_unit: 0,
+        gold_ore_per_unit: 0,
+        production_units_per_hour: 0,
+        production_wages_per_hour: 0,
+        worker_cost_per_unit: 0,
+        admin_cost_per_unit: 0,
+        units_sold_an_hour: 0,
+        revenue_per_unit: parseFloat(row['Projected Revenue'] || 0),
+        dependency_buildings: row['Dependent Building'],
         notes: row['Notes']
       })),
       

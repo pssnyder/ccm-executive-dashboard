@@ -6,6 +6,7 @@ import ExecutiveSummary from './components/ExecutiveSummary';
 import IntelligenceDesk from './components/IntelligenceDesk';
 import RaidVault from './components/RaidVault';
 import Financials from './components/Financials';
+import TradeAnalysis from './components/TradeAnalysis';
 import Archives from './components/Archives';
 import Footer from './components/Footer';
 import Workspace from './components/Workspace';
@@ -141,6 +142,9 @@ function AppContent() {
         </div>
         <div style={{ display: activeTab === 'bench' ? 'block' : 'none' }}>
           <Financials appData={appData} />
+        </div>
+        <div style={{ display: activeTab === 'trade' ? 'block' : 'none' }}>
+          <TradeAnalysis appData={appData} />
         </div>
         <div style={{ display: activeTab === 'arch' ? 'block' : 'none' }}>
           <Archives />

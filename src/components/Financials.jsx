@@ -19,42 +19,23 @@ const Financials = ({ appData }) => {
     return `${((value || 0) * 100).toFixed(2)}%`;
   };
 
-  // Calculate retail arbitrage opportunities
-  const getRetailOpportunities = () => {
-    const transport = commodityAnalysis.find(c => c.commodity.toLowerCase() === 'transport');
-    const transportCost = transport?.market_price || 0;
-    
-    return commodityAnalysis
-      .filter(c => c.average_retail_price > 0 && c.market_price > 0) // Only retail products
-      .map(c => {
-        const totalCost = c.market_price + transportCost;
-        const margin = c.average_retail_price - totalCost;
-        const roi = totalCost > 0 ? (margin / totalCost) * 100 : 0;
-        
-        return {
-          ...c,
-          transportCost,
-          totalCost,
-          margin,
-          roi
-        };
-      })
-      .sort((a, b) => b.revenue_per_unit - a.revenue_per_unit); // Sort by revenue/unit
-  };
-
-  // Calculate cash runway
+  // Calculate cash runway based on actual operations
   const getCashRunway = () => {
-    const highPriority = commodityAnalysis.filter(c => c.priority?.toLowerCase() === 'high');
-    const hourlyWages = highPriority.reduce((sum, c) => sum + (c.production_wages_per_hour || 0), 0);
-    const dailyBurn = hourlyWages * 24;
+    const activeOps = appData?.operations?.active_operations || [];
+    const companyOverview = appData?.company_overview || {};
+    
+    // Use admin overhead from company overview as hourly burn rate
+    // Admin overhead is typically given as $/hour in the game
+    const hourlyBurn = parseFloat(companyOverview.admin_overhead || 0);
+    const dailyBurn = hourlyBurn * 24;
     const weeklyBurn = dailyBurn * 7;
     const currentCash = balanceSheet.cash || 0;
-    const runwayHours = hourlyWages > 0 ? currentCash / hourlyWages : 0;
+    const runwayHours = hourlyBurn > 0 ? currentCash / hourlyBurn : 0;
     const runwayDays = runwayHours / 24;
     
     return {
       currentCash,
-      hourlyBurn: hourlyWages,
+      hourlyBurn,
       dailyBurn,
       weeklyBurn,
       runwayHours,
@@ -63,7 +44,6 @@ const Financials = ({ appData }) => {
     };
   };
 
-  const retailOpportunities = getRetailOpportunities();
   const cashRunway = getCashRunway();
 
   return (
@@ -102,55 +82,6 @@ const Financials = ({ appData }) => {
             <div className="text-xs text-cyan-400 uppercase mb-2">Weekly Burn</div>
             <div className="text-2xl font-bold text-white">{formatCurrency(cashRunway.weeklyBurn)}/wk</div>
           </div>
-        </div>
-      </div>
-
-      {/* Retail Arbitrage Opportunities */}
-      <div className="glass-panel p-8 rounded-3xl border-slate-800">
-        <h2 className="text-xs uppercase font-bold text-slate-500 mb-6 tracking-widest">Retail Arbitrage Scanner</h2>
-        <div className="overflow-x-auto">
-          <table className="w-full">
-            <thead>
-              <tr className="border-b border-slate-700 text-left">
-                <th className="py-3 text-slate-400 font-mono text-xs">Product</th>
-                <th className="py-3 text-slate-400 font-mono text-xs text-right">Buy Price</th>
-                <th className="py-3 text-slate-400 font-mono text-xs text-right">Transport</th>
-                <th className="py-3 text-slate-400 font-mono text-xs text-right">Total Cost</th>
-                <th className="py-3 text-slate-400 font-mono text-xs text-right">Sell Price</th>
-                <th className="py-3 text-slate-400 font-mono text-xs text-right">Margin</th>
-                <th className="py-3 text-slate-400 font-mono text-xs text-right">ROI</th>
-                <th className="py-3 text-slate-400 font-mono text-xs text-right">Rev/Hr</th>
-                <th className="py-3 text-slate-400 font-mono text-xs">Priority</th>
-              </tr>
-            </thead>
-            <tbody>
-              {retailOpportunities.map((opp, index) => (
-                <tr key={index} className="border-b border-slate-800">
-                  <td className="py-3 text-white font-medium capitalize">{opp.commodity}</td>
-                  <td className="py-3 text-right font-mono text-sm text-slate-300">{formatCurrency(opp.market_price)}</td>
-                  <td className="py-3 text-right font-mono text-sm text-slate-300">{formatCurrency(opp.transportCost)}</td>
-                  <td className="py-3 text-right font-mono text-sm text-blue-400">{formatCurrency(opp.totalCost)}</td>
-                  <td className="py-3 text-right font-mono text-sm text-green-400">{formatCurrency(opp.average_retail_price)}</td>
-                  <td className="py-3 text-right font-mono text-sm text-cyan-400">{formatCurrency(opp.margin)}</td>
-                  <td className={`py-3 text-right font-mono text-sm font-bold ${
-                    opp.roi > 100 ? 'text-green-400' : opp.roi > 50 ? 'text-yellow-400' : 'text-slate-400'
-                  }`}>
-                    {opp.roi.toFixed(1)}%
-                  </td>
-                  <td className="py-3 text-right font-mono text-sm text-purple-400">{formatCurrency(opp.revenue_per_unit)}</td>
-                  <td className="py-3">
-                    <span className={`px-2 py-1 rounded text-xs ${
-                      opp.priority?.toLowerCase() === 'high' ? 'bg-green-900/30 text-green-400' :
-                      opp.priority?.toLowerCase() === 'medium' ? 'bg-yellow-900/30 text-yellow-400' :
-                      'bg-slate-900/30 text-slate-400'
-                    }`}>
-                      {opp.priority || 'N/A'}
-                    </span>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
         </div>
       </div>
 

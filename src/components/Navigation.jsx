@@ -11,6 +11,7 @@ const Navigation = ({ activeTab, showTab }) => {
       <button onClick={() => showTab('intel')} className={getButtonClass('intel')}>Intelligence Desk</button>
       <button onClick={() => showTab('vault')} className={getButtonClass('vault')}>Warehouse</button>
       <button onClick={() => showTab('bench')} className={getButtonClass('bench')}>Financials</button>
+      <button onClick={() => showTab('trade')} className={getButtonClass('trade')}>Trade Analysis</button>
       <button onClick={() => showTab('arch')} className={getButtonClass('arch')}>Archives</button>
     </nav>
   );

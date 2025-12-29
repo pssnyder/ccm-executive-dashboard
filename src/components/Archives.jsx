@@ -68,12 +68,11 @@ const Archives = () => {
 10. Warehouse Current: Inventory levels
 11. Buildings Current: Building distribution
 12. Company Levels Current: Level progression
-13. Buildings Owned Current: Your buildings list
-14. Active Operations Current: Production queue
-15. Strategic Goals Current: Long-term objectives
-16. Strategy Notes Current: Planning notes
-17. Transaction History: Recent transactions
-18. Commodity Analysis: Market price tracking`
+13. Active Operations Current: Production queue and buildings list
+14. Strategic Goals Current: Long-term objectives
+15. Strategy Notes Current: Planning notes
+16. Transaction History: Recent transactions
+18. Retail Research: Market analysis and retail opportunities`
     },
     gameGuides: {
       title: 'Game Strategy Guides',

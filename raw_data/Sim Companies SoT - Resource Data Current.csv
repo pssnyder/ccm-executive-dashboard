@@ -1,0 +1,151 @@
+ResourceId,Name,Transportation,ProductionWagesPerHour,ProducedUnitsPerHour,HasRetail,IsResearch
+1,Power,0,414,2566.94,No,No
+2,Water,0,345,1626.43,No,No
+3,Apples,1,103.5,202.19,Yes,No
+4,Oranges,1,103.5,186.01,Yes,No
+5,Grapes,1,103.5,161.75,Yes,No
+6,Grain,0.1,103.5,808.75,No,No
+7,Steak,1,414,25.67,Yes,No
+8,Sausages,0.1,414,87.02,Yes,No
+9,Eggs,0.1,138,316.47,Yes,No
+10,Crude oil,1,517.5,41.52,No,No
+11,Petrol,1,483,111.41,Yes,No
+12,Diesel,1,483,115.13,Yes,No
+13,Transport,0,310.5,3173.95,No,No
+14,Minerals,1,276,119.23,No,No
+15,Bauxite,1,276,96.52,No,No
+16,Silicon,1,414,154.02,No,No
+17,Chemicals,1,414,213.91,No,No
+18,Aluminium,1,414,119.79,No,No
+19,Plastic,1,483,204.25,No,No
+20,Processors,1,379.5,7.16,No,No
+21,Electronic components,1,379.5,41.33,No,No
+22,Batteries,1,379.5,25.26,No,No
+23,Displays,1,379.5,32.14,No,No
+24,Smart phones,2,379.5,11.48,Yes,No
+25,Tablets,2,379.5,11.48,Yes,No
+26,Laptops,2,379.5,9.18,Yes,No
+27,Monitors,2,379.5,18.37,Yes,No
+28,Televisions,2,379.5,16.07,Yes,No
+29,Plant research,0,448.5,4.78,No,No
+30,Energy research,0,586.5,3.3,No,No
+31,Mining research,0,586.5,3,No,No
+32,Electronics research,0,586.5,2.4,No,No
+33,Breeding research,0,414,3.85,No,No
+34,Chemistry research,0,414,4.71,No,No
+35,Software,0,586.5,6.56,No,No
+40,Cotton,0.5,103.5,258.8,No,No
+41,Fabric,0.5,138,241.12,No,No
+42,Iron ore,1,276,181.69,No,No
+43,Steel,1,414,192.52,No,No
+44,Sand,1,276,1419.44,No,No
+45,Glass,1,414,128.35,No,No
+46,Leather,1,138,30.14,No,No
+47,On-board computer,1,379.5,13.78,No,No
+48,Electric motor,2,621,30.78,No,No
+49,Luxury car interior,2,448.5,19.93,No,No
+50,Basic interior,2,448.5,31.89,No,No
+51,Car body,2,448.5,23.92,No,No
+52,Combustion engine,2,621,5.6,No,No
+53,Economy e-car,5,448.5,19.93,Yes,No
+54,Luxury e-car,5,448.5,3.99,Yes,No
+55,Economy car,5,448.5,13.95,Yes,No
+56,Luxury car,5,448.5,1.99,Yes,No
+57,Truck,5,448.5,4.78,Yes,No
+58,Automotive research,0,552,4.19,No,No
+59,Fashion research,0,448.5,6.78,No,No
+60,Underwear,1,138,165.77,Yes,No
+61,Gloves,1,138,143.17,Yes,No
+62,Dress,1,138,186.87,Yes,No
+63,Stiletto Heel,1,138,97.96,Yes,No
+64,Handbags,1,138,67.82,Yes,No
+65,Sneakers,1,138,173.31,Yes,No
+66,Seeds,0.1,103.5,889.63,No,No
+67,Xmas crackers,0.5,414,222.47,Yes,No
+68,Gold ore,10,276,56.78,No,No
+69,Golden bars,1000,414,29.95,No,No
+70,Luxury watch,1,138,18.84,Yes,No
+71,Necklace,1,138,41.44,Yes,No
+72,Sugarcane,0.1,103.5,647,No,No
+73,Ethanol,1,241.5,60.94,No,No
+74,Methane,1,517.5,55.36,No,No
+75,Carbon fibers,0.1,483,245.11,No,No
+76,Carbon composite,1,414,68.45,No,No
+77,Fuselage,2,586.5,3.3,No,No
+78,Wing,2,586.5,8.11,No,No
+79,High grade e-comps,1,379.5,1.84,No,No
+80,Flight computer,1,724.5,2.26,No,No
+81,Cockpit,1,724.5,1.97,No,No
+82,Attitude control,1,724.5,2.72,No,No
+83,Rocket fuel,1,483,77.99,No,No
+84,Propellant tank,1,586.5,4.51,No,No
+85,Solid fuel booster,1,621,0.28,No,No
+86,Rocket engine,1,621,0.28,No,No
+87,Heat shield,1,586.5,12.01,No,No
+88,Ion drive,1,621,0.56,No,No
+89,Jet engine,1,621,0.84,No,No
+90,Sub-orbital 2nd stage,20,586.5,3,No,No
+91,Sub-orbital rocket,20,759,0.63,Yes,No
+92,Orbital booster,100,586.5,1.5,No,No
+93,Starship,100,586.5,0.3,No,No
+94,BFR,2000,759,0.21,Yes,No
+95,Jumbo jet,2000,759,0.06,Yes,No
+96,Luxury jet,1000,759,0.17,Yes,No
+97,Single engine plane,100,759,1.48,Yes,No
+98,Quadcopter,2,724.5,12.45,Yes,No
+99,Satellite,10,724.5,0.11,Yes,No
+100,Aerospace research,0,517.5,0.35,No,No
+101,Reinforced concrete,10,379.5,188.27,No,No
+102,Bricks,1,379.5,367.35,Yes,No
+103,Cement,1,379.5,298.47,Yes,No
+104,Clay,1,276,1078.77,No,No
+105,Limestone,1,276,794.89,No,No
+106,Wood,1,103.5,76.83,No,No
+107,Steel beams,5,483,129.98,No,No
+108,Planks,1,483,115.13,Yes,No
+109,Windows,1,483,16.71,Yes,No
+110,Tools,1,483,26,Yes,No
+111,Construction units,0,345,0.99,No,No
+112,Bulldozer,5,448.5,5.58,No,No
+113,Materials research,0,414,3.42,No,No
+114,Robots,2,379.5,2.3,No,No
+115,Cows,1,138,37.68,No,No
+116,Pigs,1,138,82.89,No,No
+117,Milk,1,138,120.56,Yes,No
+118,Coffee beans,0.1,103.5,412.46,No,No
+119,Coffee powder,1,379.5,22.96,Yes,No
+120,Vegetables,0.2,103.5,283.06,No,No
+121,Bread,1,448.5,11.96,Yes,No
+122,Cheese,1,379.5,5.51,Yes,No
+123,Apple pie,2,448.5,5.98,Yes,No
+124,Orange juice,1,241.5,78.61,Yes,No
+125,Apple cider,1,241.5,36.56,Yes,No
+126,Ginger beer,1,241.5,73.13,Yes,No
+127,Frozen pizza,1,379.5,9.18,Yes,No
+128,Pasta,1,379.5,18.37,No,No
+129,Hamburger,2,655.5,0.52,Yes,No
+130,Lasagna,2,655.5,1.56,Yes,No
+131,Meat balls,2,655.5,1.04,Yes,No
+132,Cocktails,2,655.5,0.52,Yes,No
+133,Flour,0.1,379.5,87.25,No,No
+134,Butter,1,379.5,13.78,Yes,No
+135,Sugar,1,379.5,41.33,No,No
+136,Cocoa,0.1,103.5,169.84,No,No
+137,Dough,1,448.5,11.96,No,No
+138,Sauce,2,655.5,0.67,No,No
+139,Fodder,1,379.5,284.7,No,No
+140,Chocolate,1,379.5,3.21,Yes,No
+141,Vegetable oil,1,379.5,36.74,No,No
+142,Salad,2,655.5,1.79,Yes,No
+143,Samosa,2,655.5,1.83,Yes,No
+144,Xmas ornament,0.5,414,179.69,Yes,No
+145,Recipes,0,517.5,3.81,No,No
+146,Pumpkin,1,103.5,104.49,Yes,No
+147,Jack o'lantern,1,379.5,284.7,Yes,No
+148,Witch costume,1,138,120.56,Yes,No
+149,Pumpkin soup,2,655.5,2.09,Yes,No
+150,Tree,1,79.35,10,Yes,No
+151,Easter Bunny,1,379.5,3.67,Yes,No
+152,Ramadan sweets,1,379.5,5.05,Yes,No
+153,Chocolate icecream,1,379.5,32.14,Yes,No
+154,Apple icecream,1,379.5,32.14,Yes,No
