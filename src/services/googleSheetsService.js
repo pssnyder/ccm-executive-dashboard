@@ -33,7 +33,10 @@ const SHEETS = {
   TRANSACTION_HISTORY: 'Transaction History',
   
   // Retail market analysis
-  RETAIL_RESEARCH: 'Retail Research'
+  RETAIL_RESEARCH: 'Retail Research',
+  
+  // Market timing and price history
+  MARKET_HISTORY: 'Market Analysis Historical'
 };
 
 /**
@@ -44,6 +47,13 @@ function sheetsToObjects(values) {
   if (!values || values.length === 0) return [];
   
   const headers = values[0];
+  
+  // Ensure headers is an array
+  if (!Array.isArray(headers)) {
+    console.warn('[GoogleSheetsService] Invalid headers format:', headers);
+    return [];
+  }
+  
   const rows = values.slice(1);
   
   return rows.map(row => {
@@ -242,6 +252,7 @@ export async function fetchDataFromGoogleSheets(forceRefresh = false) {
     const strategyNotes = sheetsData[SHEETS.STRATEGY_NOTES] || [];
     const transactionHistory = sheetsData[SHEETS.TRANSACTION_HISTORY] || [];
     const retailResearch = sheetsData[SHEETS.RETAIL_RESEARCH] || [];
+    const marketHistory = sheetsData[SHEETS.MARKET_HISTORY] || [];
 
     // Get latest records from historical datasets (CSVs are newest-first)
     const getLatest = (arr, count = 90) => arr.slice(0, count);
@@ -279,7 +290,9 @@ export async function fetchDataFromGoogleSheets(forceRefresh = false) {
         cash: parseFloat(row['Cash'] || 0),
         accounts_receivable: parseFloat(row['Accounts Receivable'] || 0),
         inventory_materials: parseFloat(row['Inventory - materials'] || 0),
-        total_assets: parseFloat(row['Cash'] || 0) + parseFloat(row['Accounts Receivable'] || 0) + parseFloat(row['Inventory - materials'] || 0) + parseFloat(row['Buildings'] || 0),
+        inventory_finished_goods: parseFloat(row['Inventory - finished goods'] || 0),
+        buildings: parseFloat(row['Buildings'] || 0),
+        total_assets: parseFloat(row['Cash'] || 0) + parseFloat(row['Accounts Receivable'] || 0) + parseFloat(row['Inventory - materials'] || 0) + parseFloat(row['Inventory - finished goods'] || 0) + parseFloat(row['Buildings'] || 0),
         retained_earnings: parseFloat(row['Retained Earnings'] || 0)
       })),
 
@@ -433,6 +446,18 @@ export async function fetchDataFromGoogleSheets(forceRefresh = false) {
         revenue_per_unit: parseFloat(row['Projected Revenue'] || 0),
         dependency_buildings: row['Dependent Building'],
         notes: row['Notes']
+      })),
+      
+      // Market timing / price history data
+      market_history: marketHistory.map(row => ({
+        timestamp: row['Timestamp'],
+        date: row['Date'],
+        resource_id: parseInt(row['ResourceID'] || 0),
+        resource_name: row['ResourceName'],
+        quality: parseInt(row['Quality'] || 0),
+        market_price: parseFloat(row['MarketPrice'] || 0),
+        avg_retail_price: parseFloat(row['AvgRetailPrice'] || 0),
+        saturation: parseFloat(row['Saturation'] || 0)
       })),
       
       // Legacy commodities object (for backward compatibility)

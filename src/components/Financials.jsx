@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useMemo } from 'react';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const Financials = ({ appData }) => {
   const balanceSheet = appData?.balance_sheet || {};
@@ -8,87 +9,46 @@ const Financials = ({ appData }) => {
   const companyOverview = appData?.company_overview || {};
   const financialRatios = appData?.financial_ratios || {};
   const transactions = appData?.transaction_summary?.recent_transactions || [];
-  const commodityAnalysis = appData?.commodity_analysis || [];
+  const inventory = appData?.inventory || [];
 
   const formatCurrency = (value) => {
     return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 }).format(value || 0);
   };
 
   const formatPercent = (value) => {
-    // Values are stored as decimals (1.0546 = 105.46%)
     return `${((value || 0) * 100).toFixed(2)}%`;
   };
-
-  // Calculate cash runway based on actual operations
-  const getCashRunway = () => {
-    const activeOps = appData?.operations?.active_operations || [];
-    const companyOverview = appData?.company_overview || {};
-    
-    // Use admin overhead from company overview as hourly burn rate
-    // Admin overhead is typically given as $/hour in the game
-    const hourlyBurn = parseFloat(companyOverview.admin_overhead || 0);
-    const dailyBurn = hourlyBurn * 24;
-    const weeklyBurn = dailyBurn * 7;
-    const currentCash = balanceSheet.cash || 0;
-    const runwayHours = hourlyBurn > 0 ? currentCash / hourlyBurn : 0;
-    const runwayDays = runwayHours / 24;
-    
-    return {
-      currentCash,
-      hourlyBurn,
-      dailyBurn,
-      weeklyBurn,
-      runwayHours,
-      runwayDays,
-      status: runwayDays > 7 ? 'healthy' : runwayDays > 3 ? 'warning' : 'critical'
-    };
+  
+  const formatCompact = (value) => {
+    if (value >= 1000000) return `$${(value / 1000000).toFixed(1)}M`;
+    if (value >= 1000) return `$${(value / 1000).toFixed(0)}k`;
+    return formatCurrency(value);
   };
 
-  const cashRunway = getCashRunway();
+  // Calculate total warehouse inventory value
+  const warehouseValue = useMemo(() => {
+    return inventory.reduce((sum, item) => sum + (item.value || 0), 0);
+  }, [inventory]);
+
+  // Prepare chart data combining balance sheet history with latest values
+  const chartData = useMemo(() => {
+    return balanceHistory.slice(0, 30).reverse().map((row, idx) => ({
+      date: row.date || row.Date || `Day ${idx + 1}`,
+      cash: parseFloat(row.cash || row.Cash || 0),
+      buildings: parseFloat(row.buildings || row.Buildings || 0),
+      inventory: parseFloat(row.inventory_materials || row['Inventory - materials'] || 0) + 
+                 parseFloat(row.inventory_finished_goods || row['Inventory - finished goods'] || 0),
+      assets: parseFloat(row.total_assets || row['Total Assets'] || 0),
+      equity: parseFloat(row.retained_earnings || row['Retained Earnings'] || 0)
+    }));
+  }, [balanceHistory]);
 
   return (
     <div className="space-y-6">
-      {/* Cash Runway */}
-      <div className="glass-panel p-8 rounded-3xl border-slate-800">
-        <h2 className="text-xs uppercase font-bold text-slate-500 mb-6 tracking-widest">Cash Runway Analysis</h2>
-        <div className="grid md:grid-cols-4 gap-6">
-          <div className="bg-gradient-to-br from-blue-900/30 to-blue-800/20 p-6 rounded-xl border border-blue-700/30">
-            <div className="text-xs text-blue-400 uppercase mb-2">Current Cash</div>
-            <div className="text-3xl font-bold text-white">{formatCurrency(cashRunway.currentCash)}</div>
-          </div>
-          <div className="bg-gradient-to-br from-purple-900/30 to-purple-800/20 p-6 rounded-xl border border-purple-700/30">
-            <div className="text-xs text-purple-400 uppercase mb-2">Daily Burn</div>
-            <div className="text-2xl font-bold text-white">{formatCurrency(cashRunway.dailyBurn)}/day</div>
-            <div className="text-xs text-slate-400 mt-1">{formatCurrency(cashRunway.hourlyBurn)}/hr</div>
-          </div>
-          <div className={`bg-gradient-to-br p-6 rounded-xl border ${
-            cashRunway.status === 'healthy' ? 'from-green-900/30 to-green-800/20 border-green-700/30' :
-            cashRunway.status === 'warning' ? 'from-yellow-900/30 to-yellow-800/20 border-yellow-700/30' :
-            'from-red-900/30 to-red-800/20 border-red-700/30'
-          }`}>
-            <div className={`text-xs uppercase mb-2 ${
-              cashRunway.status === 'healthy' ? 'text-green-400' :
-              cashRunway.status === 'warning' ? 'text-yellow-400' :
-              'text-red-400'
-            }`}>Runway</div>
-            <div className={`text-3xl font-bold ${
-              cashRunway.status === 'healthy' ? 'text-green-400' :
-              cashRunway.status === 'warning' ? 'text-yellow-400' :
-              'text-red-400'
-            }`}>{cashRunway.runwayDays.toFixed(1)} days</div>
-            <div className="text-xs text-slate-400 mt-1">{cashRunway.runwayHours.toFixed(0)} hours</div>
-          </div>
-          <div className="bg-gradient-to-br from-cyan-900/30 to-cyan-800/20 p-6 rounded-xl border border-cyan-700/30">
-            <div className="text-xs text-cyan-400 uppercase mb-2">Weekly Burn</div>
-            <div className="text-2xl font-bold text-white">{formatCurrency(cashRunway.weeklyBurn)}/wk</div>
-          </div>
-        </div>
-      </div>
-
       {/* Financial Overview Cards */}
       <div className="glass-panel p-8 rounded-3xl border-slate-800">
         <h2 className="text-xs uppercase font-bold text-slate-500 mb-6 tracking-widest">Financial Overview</h2>
-        <div className="grid md:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-6">
           <div className="bg-gradient-to-br from-green-900/30 to-green-800/20 p-6 rounded-xl border border-green-700/30">
             <div className="text-xs text-green-400 uppercase mb-2">Company Value</div>
             <div className="text-3xl font-bold text-white">{formatCurrency(companyOverview.company_value)}</div>
@@ -98,14 +58,76 @@ const Financials = ({ appData }) => {
             <div className="text-3xl font-bold text-white">{formatCurrency(balanceSheet.cash)}</div>
           </div>
           <div className="bg-gradient-to-br from-purple-900/30 to-purple-800/20 p-6 rounded-xl border border-purple-700/30">
-            <div className="text-xs text-purple-400 uppercase mb-2">Assets Value</div>
+            <div className="text-xs text-purple-400 uppercase mb-2">Buildings Value</div>
             <div className="text-3xl font-bold text-white">{formatCurrency(companyOverview.buildings_value)}</div>
           </div>
+          <div className="bg-gradient-to-br from-orange-900/30 to-orange-800/20 p-6 rounded-xl border border-orange-700/30">
+            <div className="text-xs text-orange-400 uppercase mb-2">Warehouse</div>
+            <div className="text-3xl font-bold text-white">{formatCurrency(warehouseValue)}</div>
+          </div>
           <div className="bg-gradient-to-br from-cyan-900/30 to-cyan-800/20 p-6 rounded-xl border border-cyan-700/30">
-            <div className="text-xs text-cyan-400 uppercase mb-2">Retained Earnings</div>
-            <div className="text-3xl font-bold text-white">{formatCurrency(balanceSheet.retained_earnings)}</div>
+            <div className="text-xs text-cyan-400 uppercase mb-2">Total Assets</div>
+            <div className="text-3xl font-bold text-white">
+              {formatCurrency(
+                (balanceSheet.cash || 0) +
+                (balanceSheet.accounts_receivable || 0) +
+                (balanceSheet.inventory_materials || 0) +
+                (balanceSheet.inventory_finished_goods || 0) +
+                (balanceSheet.buildings || 0)
+              )}
+            </div>
+          </div>
+          <div className="bg-gradient-to-br from-pink-900/30 to-pink-800/20 p-6 rounded-xl border border-pink-700/30">
+            <div className="text-xs text-pink-400 uppercase mb-2">Total Equity</div>
+            <div className="text-3xl font-bold text-white">
+              {formatCurrency(
+                (balanceSheet.capital || 0) +
+                (balanceSheet.retained_earnings || 0)
+              )}
+            </div>
           </div>
         </div>
+      </div>
+
+      {/* Financial Trends */}
+      <div className="glass-panel p-8 rounded-3xl border-slate-800">
+        <h2 className="text-xs uppercase font-bold text-slate-500 mb-6 tracking-widest">Financial Trends (30 Days)</h2>
+        
+        {chartData.length > 1 ? (
+          <ResponsiveContainer width="100%" height={400}>
+            <LineChart data={chartData}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
+              <XAxis 
+                dataKey="date" 
+                stroke="#94a3b8"
+                style={{ fontSize: '12px' }}
+              />
+              <YAxis 
+                stroke="#94a3b8"
+                style={{ fontSize: '12px' }}
+                tickFormatter={formatCompact}
+              />
+              <Tooltip 
+                contentStyle={{ 
+                  backgroundColor: '#1e293b', 
+                  border: '1px solid #334155',
+                  borderRadius: '8px'
+                }}
+                formatter={(value) => formatCurrency(value)}
+              />
+              <Legend />
+              <Line type="monotone" dataKey="cash" stroke="#3b82f6" name="Cash" strokeWidth={2} dot={false} />
+              <Line type="monotone" dataKey="buildings" stroke="#8b5cf6" name="Buildings" strokeWidth={2} dot={false} />
+              <Line type="monotone" dataKey="inventory" stroke="#f97316" name="Inventory" strokeWidth={2} dot={false} />
+              <Line type="monotone" dataKey="assets" stroke="#06b6d4" name="Total Assets" strokeWidth={2} dot={false} />
+              <Line type="monotone" dataKey="equity" stroke="#ec4899" name="Retained Earnings" strokeWidth={2} dot={false} />
+            </LineChart>
+          </ResponsiveContainer>
+        ) : (
+          <div className="text-center text-slate-400 py-8">
+            <p>Not enough historical data to display trends. Data will appear after 2+ days of balance sheet history.</p>
+          </div>
+        )}
       </div>
 
       {/* Balance Sheet */}
