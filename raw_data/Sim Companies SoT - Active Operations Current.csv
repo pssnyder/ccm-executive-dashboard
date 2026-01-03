@@ -1,7 +1,7 @@
-Building,Type,Level,Product,Quantity,Sourcing Value,Quality,Cost Per Unit,Finish Time,Price,Projected Revenue
-Software R&D,RESEARCH,1,Software,86,7815.00,0,90.87,2025-12-29 9:10 AM,109.00,1559.00
-Grocery Store 1,RETAIL,1,Oranges,1686,4552.00,0,2.70,2025-12-29 2:03 PM,6.99,8376.00
-Grocery Store 2,RETAIL,1,Oranges,1686,4552.00,0,2.70,2025-12-29 2:05 PM,6.99,8376.00
-Grocery Store 3,RETAIL,1,Oranges,1686,4552.00,0,2.70,2025-12-29 2:06 PM,6.99,8376.00
-Grocery Store 4,RETAIL,1,Grapes,1484,4614.00,0,3.30,2025-12-29 2:07 PM,7.99,8449.00
-Grocery Store 5,RETAIL,1,Grapes,1484,4897.00,0,3.30,2025-12-29 2:10 PM,7.99,8449.00
+Name,Building,Type,Level,Product,Quantity,Projected Revenue,Finish Time
+Grocery Store 1,Grocery store,RETAIL,1,Cheese,235,31958.00,2025-12-31 3:03 PM
+Grocery Store 2,Grocery store,RETAIL,1,Sausages,1263,17542.00,2025-12-31 3:07 PM
+Grocery Store 3,Grocery store,RETAIL,1,Eggs,5563,10679.00,2025-12-31 2:38 PM
+Car Dealership,Car dealership,RETAIL,1,Economy e-car,2,7234.00,2025-12-30 6:57 PM
+Gas Station 1,Gas station,RETAIL,2,Petrol,100,4655.00,2025-12-30 7:20 PM
+Gas Station 2,Gas station,RETAIL,2,Diesel,100,4611.00,2025-12-30 7:18 PM

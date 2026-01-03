@@ -378,16 +378,11 @@ export async function fetchDataFromGoogleSheets(forceRefresh = false) {
       // Operations data from sheets
       operations: {
         short_term: activeOperations.map(row => ({
+          name: row['Name'],
           building: row['Building'],
           type: row['Type'],
-          product: row['Product'],
-          quantity: parseNumber(row['Quantity']),
-          sourcing_value: parseNumber(row['Sourcing Value']),
-          quality: parseNumber(row['Quality']),
-          cost_per_unit: parseNumber(row['Cost Per Unit']),
-          finish_time: row['Finish Time'],
-          price: parseNumber(row['Price']),
-          projected_revenue: parseNumber(row['Projected Revenue'])
+          level: parseNumber(row['Level']),
+          product: row['Product']
         })),
         medium_term_strategy: strategyNotes.find(row => row['Type'] === 'Medium Term')?.['Content'] || ''
       },

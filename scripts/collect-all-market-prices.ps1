@@ -3,8 +3,7 @@
 
 param(
     [string]$OutputPath = "..\raw_data\misc\all-market-prices.csv",
-    [string]$ApiBase = "https://www.simcompanies.com/api/v4",
-    [string]$Realm = "0",  # 0 = Earth realm
+    [string]$Realm = "0",
     [int]$Quality = 0
 )
 
@@ -13,7 +12,7 @@ Write-Host "Collecting all quality $Quality market prices..." -ForegroundColor G
 Write-Host ""
 
 # Resource ID list (all tradeable resources in SimCompanies)
-$resourceIds = 1..130  # Covers all known resources
+$resourceIds = 1..130
 
 $results = @()
 $successCount = 0
@@ -23,28 +22,29 @@ Write-Host "Fetching prices for $($resourceIds.Count) resources..." -ForegroundC
 
 foreach ($resourceId in $resourceIds) {
     try {
-        $url = "$ApiBase/market-ticker/$Realm/$resourceId/$Quality/"
+        $url = "https://api.simcotools.com/v1/realms/$Realm/market/prices/$resourceId/$Quality"
         $response = Invoke-RestMethod -Uri $url -Method Get -ErrorAction Stop
         
-        if ($response) {
+        $lastPrice = if ($response.prices -and $response.prices.Count -gt 0) {
+            $response.prices[0].price
+        } else { 0 }
+        
+        if ($lastPrice -gt 0) {
             $results += [PSCustomObject]@{
                 Timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
                 ResourceId = $resourceId
                 Quality = $Quality
-                Price = $response.price
-                AveragePrice = $response.priceStats.average
-                MarketSaturation = $response.marketSaturation
+                Price = $lastPrice
             }
             $successCount++
-            Write-Host "  ✓ Resource $resourceId : $($response.price)" -ForegroundColor Green
+            Write-Host "  Resource $resourceId : `$$lastPrice" -ForegroundColor Green
         }
         
-        # Rate limiting: 2 requests per second
         Start-Sleep -Milliseconds 600
     }
     catch {
         $failCount++
-        Write-Host "  ✗ Resource $resourceId : $($_.Exception.Message)" -ForegroundColor DarkGray
+        Write-Host "  Resource $resourceId : Failed" -ForegroundColor DarkGray
     }
 }
 
@@ -54,7 +54,6 @@ Write-Host "Success: $successCount" -ForegroundColor Green
 Write-Host "Failed: $failCount" -ForegroundColor Red
 Write-Host ""
 
-# Export to CSV
 if ($results.Count -gt 0) {
     $results | Export-Csv -Path $OutputPath -NoTypeInformation -Encoding ASCII
     Write-Host "Data exported to: $OutputPath" -ForegroundColor Green

@@ -1,151 +1,67 @@
-ResourceId,Name,Transportation,ProductionWagesPerHour,ProducedUnitsPerHour,HasRetail,IsResearch
-1,Power,0,414.00,2566.9,No,No
-2,Water,0,345.00,1626.4,No,No
-3,Apples,1,103.50,202.2,Yes,No
-4,Oranges,1,103.50,186.0,Yes,No
-5,Grapes,1,103.50,161.8,Yes,No
-6,Grain,0.1,103.50,808.8,No,No
-7,Steak,1,414.00,25.7,Yes,No
-8,Sausages,0.1,414.00,87.0,Yes,No
-9,Eggs,0.1,138.00,316.5,Yes,No
-10,Crude oil,1,517.50,41.5,No,No
-11,Petrol,1,483.00,111.4,Yes,No
-12,Diesel,1,483.00,115.1,Yes,No
-13,Transport,0,310.50,3174.0,No,No
-14,Minerals,1,276.00,119.2,No,No
-15,Bauxite,1,276.00,96.5,No,No
-16,Silicon,1,414.00,154.0,No,No
-17,Chemicals,1,414.00,213.9,No,No
-18,Aluminium,1,414.00,119.8,No,No
-19,Plastic,1,483.00,204.3,No,No
-20,Processors,1,379.50,7.2,No,No
-21,Electronic components,1,379.50,41.3,No,No
-22,Batteries,1,379.50,25.3,No,No
-23,Displays,1,379.50,32.1,No,No
-24,Smart phones,2,379.50,11.5,Yes,No
-25,Tablets,2,379.50,11.5,Yes,No
-26,Laptops,2,379.50,9.2,Yes,No
-27,Monitors,2,379.50,18.4,Yes,No
-28,Televisions,2,379.50,16.1,Yes,No
-29,Plant research,0,448.50,4.8,No,No
-30,Energy research,0,586.50,3.3,No,No
-31,Mining research,0,586.50,3.0,No,No
-32,Electronics research,0,586.50,2.4,No,No
-33,Breeding research,0,414.00,3.9,No,No
-34,Chemistry research,0,414.00,4.7,No,No
-35,Software,0,586.50,6.6,No,No
-40,Cotton,0.5,103.50,258.8,No,No
-41,Fabric,0.5,138.00,241.1,No,No
-42,Iron ore,1,276.00,181.7,No,No
-43,Steel,1,414.00,192.5,No,No
-44,Sand,1,276.00,1419.4,No,No
-45,Glass,1,414.00,128.4,No,No
-46,Leather,1,138.00,30.1,No,No
-47,On-board computer,1,379.50,13.8,No,No
-48,Electric motor,2,621.00,30.8,No,No
-49,Luxury car interior,2,448.50,19.9,No,No
-50,Basic interior,2,448.50,31.9,No,No
-51,Car body,2,448.50,23.9,No,No
-52,Combustion engine,2,621.00,5.6,No,No
-53,Economy e-car,5,448.50,19.9,Yes,No
-54,Luxury e-car,5,448.50,4.0,Yes,No
-55,Economy car,5,448.50,14.0,Yes,No
-56,Luxury car,5,448.50,2.0,Yes,No
-57,Truck,5,448.50,4.8,Yes,No
-58,Automotive research,0,552.00,4.2,No,No
-59,Fashion research,0,448.50,6.8,No,No
-60,Underwear,1,138.00,165.8,Yes,No
-61,Gloves,1,138.00,143.2,Yes,No
-62,Dress,1,138.00,186.9,Yes,No
-63,Stiletto Heel,1,138.00,98.0,Yes,No
-64,Handbags,1,138.00,67.8,Yes,No
-65,Sneakers,1,138.00,173.3,Yes,No
-66,Seeds,0.1,103.50,889.6,No,No
-67,Xmas crackers,0.5,414.00,222.5,Yes,No
-68,Gold ore,10,276.00,56.8,No,No
-69,Golden bars,1000,414.00,30.0,No,No
-70,Luxury watch,1,138.00,18.8,Yes,No
-71,Necklace,1,138.00,41.4,Yes,No
-72,Sugarcane,0.1,103.50,647.0,No,No
-73,Ethanol,1,241.50,60.9,No,No
-74,Methane,1,517.50,55.4,No,No
-75,Carbon fibers,0.1,483.00,245.1,No,No
-76,Carbon composite,1,414.00,68.5,No,No
-77,Fuselage,2,586.50,3.3,No,No
-78,Wing,2,586.50,8.1,No,No
-79,High grade e-comps,1,379.50,1.8,No,No
-80,Flight computer,1,724.50,2.3,No,No
-81,Cockpit,1,724.50,2.0,No,No
-82,Attitude control,1,724.50,2.7,No,No
-83,Rocket fuel,1,483.00,78.0,No,No
-84,Propellant tank,1,586.50,4.5,No,No
-85,Solid fuel booster,1,621.00,0.3,No,No
-86,Rocket engine,1,621.00,0.3,No,No
-87,Heat shield,1,586.50,12.0,No,No
-88,Ion drive,1,621.00,0.6,No,No
-89,Jet engine,1,621.00,0.8,No,No
-90,Sub-orbital 2nd stage,20,586.50,3.0,No,No
-91,Sub-orbital rocket,20,759.00,0.6,Yes,No
-92,Orbital booster,100,586.50,1.5,No,No
-93,Starship,100,586.50,0.3,No,No
-94,BFR,2000,759.00,0.2,Yes,No
-95,Jumbo jet,2000,759.00,0.1,Yes,No
-96,Luxury jet,1000,759.00,0.2,Yes,No
-97,Single engine plane,100,759.00,1.5,Yes,No
-98,Quadcopter,2,724.50,12.5,Yes,No
-99,Satellite,10,724.50,0.1,Yes,No
-100,Aerospace research,0,517.50,0.4,No,No
-101,Reinforced concrete,10,379.50,188.3,No,No
-102,Bricks,1,379.50,367.4,Yes,No
-103,Cement,1,379.50,298.5,Yes,No
-104,Clay,1,276.00,1078.8,No,No
-105,Limestone,1,276.00,794.9,No,No
-106,Wood,1,103.50,76.8,No,No
-107,Steel beams,5,483.00,130.0,No,No
-108,Planks,1,483.00,115.1,Yes,No
-109,Windows,1,483.00,16.7,Yes,No
-110,Tools,1,483.00,26.0,Yes,No
-111,Construction units,0,345.00,1.0,No,No
-112,Bulldozer,5,448.50,5.6,No,No
-113,Materials research,0,414.00,3.4,No,No
-114,Robots,2,379.50,2.3,No,No
-115,Cows,1,138.00,37.7,No,No
-116,Pigs,1,138.00,82.9,No,No
-117,Milk,1,138.00,120.6,Yes,No
-118,Coffee beans,0.1,103.50,412.5,No,No
-119,Coffee powder,1,379.50,23.0,Yes,No
-120,Vegetables,0.2,103.50,283.1,No,No
-121,Bread,1,448.50,12.0,Yes,No
-122,Cheese,1,379.50,5.5,Yes,No
-123,Apple pie,2,448.50,6.0,Yes,No
-124,Orange juice,1,241.50,78.6,Yes,No
-125,Apple cider,1,241.50,36.6,Yes,No
-126,Ginger beer,1,241.50,73.1,Yes,No
-127,Frozen pizza,1,379.50,9.2,Yes,No
-128,Pasta,1,379.50,18.4,No,No
-129,Hamburger,2,655.50,0.5,Yes,No
-130,Lasagna,2,655.50,1.6,Yes,No
-131,Meat balls,2,655.50,1.0,Yes,No
-132,Cocktails,2,655.50,0.5,Yes,No
-133,Flour,0.1,379.50,87.3,No,No
-134,Butter,1,379.50,13.8,Yes,No
-135,Sugar,1,379.50,41.3,No,No
-136,Cocoa,0.1,103.50,169.8,No,No
-137,Dough,1,448.50,12.0,No,No
-138,Sauce,2,655.50,0.7,No,No
-139,Fodder,1,379.50,284.7,No,No
-140,Chocolate,1,379.50,3.2,Yes,No
-141,Vegetable oil,1,379.50,36.7,No,No
-142,Salad,2,655.50,1.8,Yes,No
-143,Samosa,2,655.50,1.8,Yes,No
-144,Xmas ornament,0.5,414.00,179.7,Yes,No
-145,Recipes,0,517.50,3.8,No,No
-146,Pumpkin,1,103.50,104.5,Yes,No
-147,Jack o'lantern,1,379.50,284.7,Yes,No
-148,Witch costume,1,138.00,120.6,Yes,No
-149,Pumpkin soup,2,655.50,2.1,Yes,No
-150,Tree,1,79.35,10.0,Yes,No
-151,Easter Bunny,1,379.50,3.7,Yes,No
-152,Ramadan sweets,1,379.50,5.1,Yes,No
-153,Chocolate icecream,1,379.50,32.1,Yes,No
-154,Apple icecream,1,379.50,32.1,Yes,No
+ResourceId,Name,Quality,AverageRetailPrice,UnitsSoldPerHour,Datetime
+3,Apples,0,6.35,73.49,2025-12-28T15:13:30.973681Z
+4,Oranges,0,7.27,65.25,2025-12-28T15:13:30.973681Z
+5,Grapes,0,8.33,58.01,2025-12-28T15:13:30.973681Z
+7,Steak,0,60.11,15.9,2025-12-28T15:13:30.973681Z
+8,Sausages,0,16.54,52.64,2025-12-28T15:13:30.973681Z
+9,Eggs,0,2.56,231.88,2025-12-28T15:13:30.973681Z
+11,Petrol,0,53.93,48.22,2025-12-28T15:13:30.973681Z
+12,Diesel,0,52.84,51.77,2025-12-28T15:13:30.973681Z
+24,Smart phones,0,936.47,1.28,2025-12-28T15:13:30.973681Z
+25,Tablets,0,1524.90,0.53,2025-12-28T15:13:30.973681Z
+26,Laptops,0,1770.52,0.69,2025-12-28T15:13:30.973681Z
+27,Monitors,0,876.69,1.31,2025-12-28T15:13:30.973681Z
+28,Televisions,0,1301.36,1.13,2025-12-28T15:13:30.973681Z
+53,Economy e-car,0,4102.36,0.72,2025-12-28T15:13:30.973681Z
+54,Luxury e-car,0,8911.25,0.25,2025-12-28T15:13:30.973681Z
+55,Economy car,0,2905.62,0.93,2025-12-28T15:13:30.973681Z
+56,Luxury car,0,6743.87,0.27,2025-12-28T15:13:30.973681Z
+57,Truck,0,6928.09,0.41,2025-12-28T15:13:30.973681Z
+60,Underwear,0,37.78,20.66,2025-12-28T15:13:30.973681Z
+61,Gloves,0,61.83,14.95,2025-12-28T15:13:30.973681Z
+62,Dress,0,45.11,27.93,2025-12-28T15:13:30.973681Z
+63,Stiletto Heel,0,69.23,19.15,2025-12-28T15:13:30.973681Z
+64,Handbags,0,98.65,12.02,2025-12-28T15:13:30.973681Z
+65,Sneakers,0,42.52,22.8,2025-12-28T15:13:30.973681Z
+67,Xmas crackers,0,14.41,208.08,2025-12-28T15:13:30.973681Z
+70,Luxury watch,0,1140.02,1.63,2025-12-28T15:13:30.973681Z
+71,Necklace,0,2154.19,0.94,2025-12-28T15:13:30.973681Z
+91,Sub-orbital rocket,0,131915.41,0,2025-12-28T15:13:30.973681Z
+94,BFR,0,900244.28,0,2025-12-28T15:13:30.973681Z
+95,Jumbo jet,0,251248.10,0,2025-12-28T15:13:30.973681Z
+96,Luxury jet,0,96788.01,0,2025-12-28T15:13:30.973681Z
+97,Single engine plane,0,46376.12,0,2025-12-28T15:13:30.973681Z
+98,Quadcopter,0,1470.59,0.66,2025-12-28T15:13:30.973681Z
+99,Satellite,0,68824.25,0,2025-12-28T15:13:30.973681Z
+102,Bricks,0,9.84,60.67,2025-12-28T15:13:30.973681Z
+103,Cement,0,16.48,45.41,2025-12-28T15:13:30.973681Z
+108,Planks,0,15.67,74.06,2025-12-28T15:13:30.973681Z
+109,Windows,0,132.71,12.79,2025-12-28T15:13:30.973681Z
+110,Tools,0,219.88,8.56,2025-12-28T15:13:30.973681Z
+117,Milk,0,0.00,0,2025-12-28T15:13:30.973681Z
+119,Coffee powder,0,40.33,38.48,2025-12-28T15:13:30.973681Z
+121,Bread,0,0.00,0,2025-12-28T15:13:30.973681Z
+122,Cheese,0,153.14,9.2,2025-12-28T15:13:30.973681Z
+123,Apple pie,0,365.11,3.54,2025-12-28T15:13:30.973681Z
+124,Orange juice,0,69.62,9.12,2025-12-28T15:13:30.973681Z
+125,Apple cider,0,57.42,9.73,2025-12-28T15:13:30.973681Z
+126,Ginger beer,0,100.17,5.85,2025-12-28T15:13:30.973681Z
+127,Frozen pizza,0,532.92,2.82,2025-12-28T15:13:30.973681Z
+129,Hamburger,0,0.00,0,2025-12-28T15:13:30.973681Z
+130,Lasagna,0,0.00,0,2025-12-28T15:13:30.973681Z
+131,Meat balls,0,0.00,0,2025-12-28T15:13:30.973681Z
+132,Cocktails,0,0.00,0,2025-12-28T15:13:30.973681Z
+134,Butter,0,0.00,0,2025-12-28T15:13:30.973681Z
+140,Chocolate,0,301.88,4.22,2025-12-28T15:13:30.973681Z
+142,Salad,0,0.00,0,2025-12-28T15:13:30.973681Z
+143,Samosa,0,0.00,0,2025-12-28T15:13:30.973681Z
+144,Xmas ornament,0,28.63,43.33,2025-12-28T15:13:30.973681Z
+146,Pumpkin,0,21.19,43.89,2025-12-28T15:13:30.973681Z
+147,Jack o'lantern,0,61.49,39.32,2025-12-28T15:13:30.973681Z
+148,Witch costume,0,76.33,8.94,2025-12-28T15:13:30.973681Z
+149,Pumpkin soup,0,900.00,0,2025-12-28T15:13:30.973681Z
+150,Tree,0,353.78,9.02,2025-12-28T15:13:30.973681Z
+151,Easter Bunny,0,221.23,8.79,2025-12-28T15:13:30.973681Z
+152,Ramadan sweets,0,246.20,17.31,2025-12-28T15:13:30.973681Z
+153,Chocolate icecream,0,111.05,14.9,2025-12-28T15:13:30.973681Z
+154,Apple icecream,0,98.65,11.89,2025-12-28T15:13:30.973681Z

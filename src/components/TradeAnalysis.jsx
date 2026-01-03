@@ -31,13 +31,13 @@ const TradeAnalysis = ({ appData }) => {
 
       {/* Current Operations */}
       <div className="glass-panel p-8 rounded-3xl border-slate-800">
-        <h3 className="text-xs uppercase font-bold text-blue-400 mb-4 tracking-widest">Active Retail Operations</h3>
+        <h3 className="text-xs uppercase font-bold text-blue-400 mb-4 tracking-widest">Active Retail Strategy</h3>
         <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
           {activeOperations.filter(op => op.type === 'RETAIL').map((op, idx) => (
             <div key={idx} className="bg-gradient-to-br from-blue-900/30 to-blue-800/20 p-4 rounded-xl border border-blue-700/30">
-              <div className="text-xs text-blue-400 uppercase mb-1">{op.building}</div>
+              <div className="text-xs text-blue-400 uppercase mb-1">{op.name || op.building}</div>
               <div className="text-lg font-bold text-white">{op.product}</div>
-              <div className="text-xs text-slate-400 mt-1">Qty: {op.quantity?.toLocaleString()}</div>
+              <div className="text-xs text-slate-400 mt-1">Level {op.level || 1}</div>
             </div>
           ))}
           {activeOperations.filter(op => op.type === 'RETAIL').length === 0 && (
