@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "ccm-executive-dashboard",
     "public": "dist",
     "ignore": [
       "firebase.json",
